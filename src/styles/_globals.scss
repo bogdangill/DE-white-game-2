@@ -1,0 +1,83 @@
+@use 'helpers' as *;
+
+html {
+    font-family: $font-primary;
+    color: $color-text-primary;
+    font-weight: 600;
+
+    &.is-lock{
+		overflow: hidden;
+	}
+}
+
+body {
+    background-color: $color-background;
+}
+
+svg image {
+    width: 100%;
+    height: 100%;
+}
+
+section,
+header,
+footer {
+    @include container(1320px);
+}
+
+.title {
+    font-size: 60px;
+    line-height: 75px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include tablet-md {
+        font-size: 80px;
+        line-height: 100px;
+    }
+
+    &--sm {
+        font-size: 42px;
+        line-height: 53px;
+    }
+    &--xs {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    &--xxs {
+        font-size: 30px;
+        line-height: 38px;
+    }
+}
+
+.button {
+    display: grid;
+    place-items: center;
+    min-height: 60px;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-text-primary;
+    background-color: $color-primary;
+    border: 0;
+    padding: 20px;
+    box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.16);
+    transition: $transition;
+
+    @include hover {
+        transform: scale(.96);
+    }
+}
+
+.mobile-only {
+    @include tablet-sm {
+        display: none;
+    }
+}
+
+.m-0 {
+    margin: 0 !important;
+}
