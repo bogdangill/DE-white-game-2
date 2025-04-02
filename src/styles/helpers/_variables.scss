@@ -1,18 +1,26 @@
-$color-background: #001C37; //фон
-$color-background-light: #01376A; //подложка
-$color-background-2: linear-gradient(180.00deg, #ffc549,#9d3700 100%); //подложка 2
-$color-background-3: linear-gradient(180.00deg, #93b95e,#002942 100%); //подложка 3
-$color-primary: linear-gradient(180.00deg, #33cb47,#005132 100%);; //кнопка
-$color-text-primary: #FFFFFF; // текст 1
-$color-text-secondary: #392500; // текст 2
-$color-text-tertiary: #1F2916; // текст 3
-$color-text-4: #30DA4D; // текст 4
+$bg-main: #B4FFFB;
+$bg-covers: #FFFFFF;
+$form: #D7F2FF;
+$bg-question-cover: #FFEDA7;
+$bg-grad-1: #ffd92c;
+$bg-grad-2: #ff9c19;
+$text-1: #003A51;
+$bg-button: #FF6B02;
+$bg-button-shadow: #b44e07;
+$bg-button-pressed: #C55200;
+$bg-button-pressed-shadow: #8A3900;
+$bg-dev-1: #43FFC3;
+$bg-dev-2: #007F97;
+$bg-preis-1: #FFB753;
+$bg-preis-2: #62FFE5;
+$err: #FF3939;
+$success: #39FF39;
 
 $transition: .2s ease-out;
 
-$font-primary: "Aclonica", sans-serif;
-// $font-secondary: 'Philosopher', serif; 
+$bg-preisbonus: linear-gradient(153.64deg, $bg-preis-1 -7.519%, $bg-preis-2 105.738%);
+$bg-dev-grad: linear-gradient(150.75deg, $bg-dev-1 -6.933%, $bg-dev-2 71.638%);
+$bg-money-grad: linear-gradient(180.00deg, $bg-grad-1, $bg-grad-2 100%);
 
-$header-mobile-height: 210px;
-$header-desktop-height: 80px;
+$font-primary: "Aclonica", sans-serif;
 $mb-section: 120px;
