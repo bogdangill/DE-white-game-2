@@ -1,0 +1,37 @@
+@use '../helpers' as *;
+
+.promo {
+    color: $bg-covers;
+    background-color: $bg-promo-blyat;
+    padding: 60px 20px;
+    border-radius: 20px;
+
+    margin-bottom: 80px;
+
+    @include tablet-sm {
+        @include backgroundImg("background_1");
+    }
+    @include tablet-md {
+        flex-grow: 1;
+        margin-right: 0;
+        margin-bottom: 0;
+        padding: 38px 36px;
+    }
+
+    &__title {
+        color: inherit;
+        margin-bottom: 0;
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 18px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+
+        @include tablet-md {
+            font-size: 20px;
+            line-height: 23px;
+            max-width: 394px;
+        }
+    }
+}

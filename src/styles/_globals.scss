@@ -2,7 +2,7 @@
 
 html {
     font-family: $font-primary;
-    color: $color-text-primary;
+    color: $text-1;
     font-weight: 600;
 
     &.is-lock{
@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    background-color: $color-background;
+    background-color: $bg-main
 }
 
 svg image {
@@ -19,27 +19,51 @@ svg image {
     height: 100%;
 }
 
+.wrapper {
+    @include container(1440px, 0);
+}
+
+.row-tablet-md {
+    @include tablet-md {
+        display: flex;
+        gap: 24px;
+    }
+}
+
 section,
 header,
 footer {
-    @include container(1320px);
+    margin-right: 16px;
+    margin-left: 16px;
+
+    @include tablet-md {
+        margin-left: 40px;
+    }
 }
 
 .title {
-    font-size: 60px;
-    line-height: 75px;
-    font-weight: 700;
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 400;
+    color: $text-1;
     text-transform: uppercase;
-    text-align: center;
 
     @include tablet-md {
         font-size: 80px;
         line-height: 100px;
     }
+    &--xl {
+        font-size: 50px;
+        line-height: 57px;
 
+        @include tablet-md {
+            font-size: 80px;
+            line-height: 91px;
+        }
+    }
     &--sm {
-        font-size: 42px;
-        line-height: 53px;
+        font-size: 18px;
+        line-height: 20px;
     }
     &--xs {
         font-size: 40px;
@@ -54,21 +78,23 @@ footer {
 .button {
     display: grid;
     place-items: center;
-    min-height: 60px;
-    font-size: 30px;
+    min-height: 50px;
+    font-size: 16px;
+    line-height: 18px;
     line-height: 1;
-    font-weight: 700;
-    text-transform: uppercase;
+    text-align: center;
     text-decoration: none;
-    color: $color-text-primary;
-    background-color: $color-primary;
+    color: #fff;
+    background-color: $bg-button;
     border: 0;
-    padding: 20px;
-    box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.16);
+    padding: 6px 20px;
+    box-shadow: 0px 4px 0px 0px $bg-button-shadow;
     transition: $transition;
+    border-radius: 10px;
 
     @include hover {
-        transform: scale(.96);
+        background-color: $bg-button-pressed;
+        box-shadow: 0px 4px 0px 0px $bg-button-pressed-shadow;
     }
 }
 

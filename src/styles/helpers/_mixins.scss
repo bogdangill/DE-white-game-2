@@ -7,7 +7,7 @@
     background-size: $size;
 }
 
-@mixin container($max-width, $padding-x: 24px) {
+@mixin container($max-width, $padding-x: 16px) {
     $half-width: calc($max-width / 2);
     width: 100%;
     padding-left: $padding-x;

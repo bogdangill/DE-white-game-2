@@ -1,0 +1,59 @@
+{% set players = [
+    {
+        name: 'BlackRogue',
+        lvl: 'Level: 19',
+        price: '$500',
+        ava: 'avatar_01'
+    },
+    {
+        name: 'DeadeyeJack',
+        lvl: 'Level: 15',
+        price: '$400',
+        ava: 'avatar_02'
+    },
+    {
+        name: 'GrimCorsair',
+        lvl: 'Level: 9',
+        price: '$350',
+        ava: 'avatar_03'
+    },
+    {
+        name: 'StormReaver',
+        lvl: 'Level: 5',
+        price: '$150',
+        ava: 'avatar_04'
+    },
+    {
+        name: 'BloodAnchor',
+        lvl: 'Level: 2',
+        price: '$60',
+        ava: 'avatar_05'
+    }
+] %}
+
+<section class="players-history">
+    <h3 class="title title--sm players-history__title">
+        Spielerhistorie
+    </h3>
+    {% for item in players %}
+        <div class="player-item">
+            <img src="images/{{item.ava}}.png" alt="BlackRogue" class="player-item__ava">
+            <div class="player-item__block">
+                <h4 class="player-item__name">
+                    {{item.name}}
+                </h4>
+                <p class="player-item__lvl">
+                    {{item.lvl}}
+                </p>
+            </div>
+            <div class="player-item__block">
+                <p class="player-item__text">
+                    Gewonnen:
+                </p>
+                <div class="player-item__price">
+                    {{item.price}}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</section>
