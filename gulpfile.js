@@ -81,13 +81,13 @@ function browsersync() {
 }
 
 async function images() {
-    return src(`./src/images/**/*.+(png|jpg|gif|ico|svg|webp)`)
+    return src(`./src/images/**/*.+(png|jpg|gif|ico|svg|webp)`, {encoding: false})
         .pipe(dest(`./dist/images`))
         .pipe(browserSync.stream());
 }
 
 function observer() {
-    watch("./src/styles/**/*.scss", series(styles, purgecss)).on('change', browserSync.reload);
+    watch("./src/styles/**/*.scss", styles).on('change', browserSync.reload);
     watch("./src/pages/**/*.html", html).on('change', browserSync.reload);
     watch("./src/scripts/**/*.js", scripts);
     watch("./src/images/**/*.{png, jpeg, jpg, webp, svg}", images);
@@ -106,6 +106,6 @@ exports.clean = clean
 const compileDist = parallel(styles, scripts, images, fonts, html, copySCSS);
 
 //выполнение сценария по умолчанию
-exports.dev = series(clean, compileDist, purgecss, parallel(browsersync, observer));
+exports.dev = series(clean, compileDist, parallel(browsersync, observer));
 //финальный билд в архиве на чек
 exports.build = build
