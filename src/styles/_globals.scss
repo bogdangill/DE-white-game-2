@@ -30,6 +30,14 @@ svg image {
     }
 }
 
+.mb-section {
+    margin-bottom: 60px;
+
+    @include tablet-md {
+        margin-bottom: 40px;
+    }
+}
+
 section,
 header,
 footer {
@@ -48,10 +56,6 @@ footer {
     color: $text-1;
     text-transform: uppercase;
 
-    @include tablet-md {
-        font-size: 80px;
-        line-height: 100px;
-    }
     &--xl {
         font-size: 50px;
         line-height: 57px;

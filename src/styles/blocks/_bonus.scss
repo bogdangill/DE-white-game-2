@@ -1,0 +1,88 @@
+@use '../helpers' as *;
+
+.bonus {
+    &__title {
+        margin-bottom: 16px;
+    }
+}
+
+.bonus-item {
+    background: $bg-preisbonus;
+    padding: 20px;
+    border-radius: 20px;
+
+    @include tablet-md {
+        position: relative;
+        padding-left: 230px;
+        padding-right: 230px;
+    }
+
+    &__decor {
+        display: none;
+
+        @include tablet-md {
+            display: block;
+            position: absolute;
+            top: 0;
+
+            &:first-of-type {
+                left: 58px;
+            }
+            &:last-of-type {
+                right: 58px;
+            }
+        }
+    }
+    &__row {
+        display: flex;
+        align-items: flex-end;
+        width: 100%;
+        margin-bottom: 9px;
+    }
+    &__start,
+    &__end {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    &__start {
+        margin-right: 28px;
+    }
+    &__end {
+        margin-left: 28px;
+    }
+    &__current {
+        font-size: 18px;
+        line-height: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $bg-covers;
+        padding: 5px 16px;
+        border-radius: 30px;
+        background: $bg-money-grad;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include tablet-sm {
+            margin-right: 32px;
+        }
+    }
+    &__progressbar {
+        position: relative;
+        width: 100%;
+        height: 10px;
+        border-radius: 5px;
+        background-color: rgba($color: $bg-button, $alpha: 0.3);
+        overflow: hidden;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 75%;
+            height: 100%;
+            border-radius: 5px;
+            background-color: $bg-button;
+        }
+    }
+}
