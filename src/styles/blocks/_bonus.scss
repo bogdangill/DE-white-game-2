@@ -9,7 +9,7 @@
 .bonus-item {
     background: $bg-preisbonus;
     padding: 20px;
-    border-radius: 20px;
+    border-radius: $brad;
 
     @include tablet-md {
         position: relative;

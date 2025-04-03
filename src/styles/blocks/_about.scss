@@ -18,7 +18,7 @@
     width: 100%;
     min-height: 348px;
     background-color: $bg-covers;
-    border-radius: 20px;
+    border-radius: $brad;
     overflow: hidden;
 
     @include tablet-sm {
