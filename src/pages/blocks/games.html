@@ -30,24 +30,27 @@
     <h2 class="title games__title">
         Spiele erkunden
     </h2>
-    <ul class="games__list">
-        {% for item in games %}
-            <li class="games__item">
-                <div class="game-card">
-                    <img src="games/{{item.title}}/preview.png" alt="{{item.title}}" class="game-card__img">
-                    <div class="game-card__body">
-                        <h3 class="game-card__title">
-                            {{item.title}}
-                        </h3>
-                        <p class="game-card__text">
-                            {{item.text}}
-                        </p>
-                        <a href="{{item.link}}.html" class="button game-card__button">
-                            Spielen
-                        </a>
+    <div class="games__slider-container" data-as-container>
+        <ul class="games__list" data-as-slider>
+            {% for item in games %}
+                <li class="games__item" data-as-slide>
+                    <div class="game-card">
+                        <img src="games/{{item.title}}/preview.png" alt="{{item.title}}" class="game-card__img">
+                        <div class="game-card__body">
+                            <h3 class="game-card__title">
+                                {{item.title}}
+                            </h3>
+                            <p class="game-card__text">
+                                {{item.text}}
+                            </p>
+                            <a href="{{item.link}}.html" class="button game-card__button">
+                                Spielen
+                            </a>
+                        </div>
                     </div>
-                </div>
-            </li>
-        {%endfor%}
-    </ul>
+                </li>
+            {%endfor%}
+        </ul>
+        <div class="games__pagination" data-as-pagination></div>
+    </div>
 </section>
