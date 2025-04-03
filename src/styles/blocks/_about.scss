@@ -1,0 +1,39 @@
+@use '../helpers' as *;
+
+.about {
+    &__title {
+        margin-bottom: 16px;
+    }
+    &__list {
+        display: grid;
+        gap: 24px;
+
+        @include tablet-sm {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+.about-card {
+    width: 100%;
+    min-height: 348px;
+    background-color: $bg-covers;
+    border-radius: 20px;
+    overflow: hidden;
+
+    @include tablet-sm {
+        min-height: 320px;
+    }
+
+    &__image {
+        height: 210px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    &__text {
+        font-size: 12px;
+        line-height: 14px;
+        margin: 20px;
+    }
+}
