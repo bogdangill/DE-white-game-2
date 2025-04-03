@@ -31,20 +31,19 @@
     ]
 ] %}
 
-<section class="faq">
+<section class="faq mb-section">
     <h2 class="title faq__title">
         Allgemeine Fragen
     </h2>
-    <div class="faq-feature">
-        <p class="faq-feature__answer">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima atque in ad est quibusdam nam accusantium dolore, debitis quasi earum illo error recusandae repellendus, sequi sint laborum iure tempore quaerat.
+    <div class="faq-feature" data-faq>
+        <p class="faq-feature__answer" data-faq-answer-container>
         </p>
         <div class="faq-feature__container wg-slider" data-wg-container>
             <ul class="faq-feature__list wg-slider__inner" data-wg-slider>
                 {% for item in faqs %}
                     <li class="faq-feature__item wg-slider__slide" data-wg-slide>
                         {% for card in item %}
-                            <div class="faq-item">
+                            <div class="faq-item" data-faq-question>
                                 <img src="images/ask.png" alt="" class="faq-item__icon">
                                 <p class="faq-item__text" data-faq-answer="{{card.text}}">
                                     {{card.title}}

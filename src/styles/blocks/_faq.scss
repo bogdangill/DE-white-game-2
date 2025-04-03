@@ -9,6 +9,10 @@
 .faq-feature {
     display: grid;
     gap: 24px;
+
+    @include tablet-md {
+        grid-template-columns: 1fr 1fr;
+    }
     
     &__answer {
         font-size: 12px;
@@ -25,12 +29,19 @@
 }
 
 .faq-item {
+    cursor: pointer;
     display: flex;
     align-items: center;
+    min-height: 100px;
     gap: 20px;
     padding: 9px 20px;
     background-color: $bg-covers;
     border-radius: $brad;
+    transition: $transition;
+
+    &.is-active {
+        background-color: $bg-question-cover;
+    }
 
     &__text {
         font-size: 18px;
