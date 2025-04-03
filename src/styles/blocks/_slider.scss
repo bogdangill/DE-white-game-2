@@ -1,0 +1,38 @@
+@use '../helpers' as *;
+
+.wg-slider {
+    &__inner {
+        display: flex;
+        flex-direction: row;
+        transition: transform .2s ease-in-out;
+    }
+    &__slide {
+        user-select: none;
+        flex-shrink: 0;
+    }
+    &__pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+
+        &:empty {
+            display: none;
+        }
+
+        button[data-wg-dot] {
+            width: 26px;
+            height: 10px;
+            margin: 5px;
+            border-radius: 500px;
+            border: none;
+            background: rgba($color: $text-1, $alpha: 0.2);
+            cursor: pointer;
+            transition: $transition;
+
+            &.is-active {
+                width: 10px;
+                background: $text-1;
+            }
+        }
+    }
+}

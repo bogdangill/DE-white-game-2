@@ -1,24 +1,33 @@
-export class AsymmetricSlider {
+export class WhiteGameSlider {
     selectors = {
-        container: '[data-as-container]',
-        slider: '[data-as-slider]',
-        slide: '[data-as-slide]',
-        pagination: '[data-as-pagination]',
-        dot: '[data-as-dot]'
+        container: '[data-wg-container]',
+        slider: '[data-wg-slider]',
+        slide: '[data-wg-slide]',
+        pagination: '[data-wg-pagination]',
+        dot: '[data-wg-dot]'
+    }
+    defaultOptions = {
+        slideWidth: '100%',
+        slideGap: '24px'
     }
 
-    constructor() {
+    constructor(options = {}) {   
+        this.options = {...this.defaultOptions, ...options};
+        
         this.sliderContainer = document.querySelector(this.selectors.container);
-        if (!this.sliderContainer) {
-            console.warn('контейнер для Asymmetric Slider не обнаружен')
-            return
-        };
+        
+        if (!this.sliderContainer) return
+
         this.slider = this.sliderContainer.querySelector(this.selectors.slider);
         this.slides = this.sliderContainer.querySelectorAll(this.selectors.slide);
         this.pagination = this.sliderContainer.querySelector(this.selectors.pagination);
-        this.slideWidth = 285;
-        this.slideGap = 24;
-        this.totalSlideWidth = this.slideWidth + this.slideGap;
+
+        this.slideWidth = this.options.slideWidth;
+        console.log(this.slideWidth);
+        this.slideGap = this.options.slideGap;
+
+        this.totalSlideWidth = this._calculateTotalSlideWidth();
+
         this.currentIndex = 0;
         this.isDragging = false;
         this.startX = 0;
@@ -28,10 +37,22 @@ export class AsymmetricSlider {
     }
 
     init() {
-        this.createPagination();
-        this.bindEvents();
+        this.slider.style.gap = this.slideGap;
+        this.slides.forEach(slide => slide.style.width = this.slideWidth);
+
+        this._createPagination();
+        this._bindEvents();
     }
-    bindEvents() {
+    moveToSlide(index) {
+        this.currentIndex = index;
+        const maxOffset = (this.slides.length - this.visibleSlides) * this.totalSlideWidth;
+        let offset = index * this.totalSlideWidth;
+        if (offset > maxOffset) offset = maxOffset;
+        this.slider.style.transform = `translateX(-${offset}px)`;
+
+        this._updatePagination();
+    }
+    _bindEvents() {
         this.slider.addEventListener("mousedown", (event) => {
             this.isDragging = true;
             this.startX = event.clientX;
@@ -60,28 +81,29 @@ export class AsymmetricSlider {
             this.moveToSlide(this.currentIndex);
         });
     }
-    moveToSlide(index) {
-        this.currentIndex = index;
-        const maxOffset = (this.slides.length - this.visibleSlides) * this.totalSlideWidth;
-        let offset = index * this.totalSlideWidth;
-        if (offset > maxOffset) offset = maxOffset;
-        this.slider.style.transform = `translateX(-${offset}px)`;
-
-        this.updatePagination();
+    _calculateTotalSlideWidth() {
+        // конвертирует % в пиксели, если кастомная ширина слайда в опциях
+        const width = typeof this.slideWidth === 'string' && this.slideWidth.includes('%')
+            ? this.sliderContainer.clientWidth * parseFloat(this.slideWidth) / 100
+            : parseFloat(this.slideWidth);
+            
+        const gap = parseFloat(this.slideGap);
+        
+        return width + gap;
     }
-    updatePagination() {
+    _updatePagination() {
         this.pagination.querySelectorAll(this.selectors.dot).forEach((dot, index) => {
-            dot.classList.toggle("active", index === this.currentIndex);
+            dot.classList.toggle("is-active", index === this.currentIndex);
         });
     }
-    createPagination() {
+    _createPagination() {
         this.pagination.innerHTML = "";
 
         for (let i = 0; i < this.totalDots; i++) {
             const dot = document.createElement("button");
-            dot.setAttribute('data-as-dot', "");
+            dot.setAttribute('data-wg-dot', "");
 
-            if (i === 0) dot.classList.add("active");
+            if (i === 0) dot.classList.add("is-active");
 
             dot.addEventListener("click", () => moveToSlide(i));
             this.pagination.appendChild(dot);

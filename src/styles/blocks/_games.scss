@@ -1,9 +1,5 @@
 @use '../helpers' as *;
 
-[data-as-slider] {
-    transition: transform .2s ease-in-out;
-}
-
 .games {
     margin-right: 0;
 
@@ -11,43 +7,12 @@
         margin-bottom: 16px;
     }
     &__list {
+        flex-direction: column !important;
+        gap: 24px;
         padding-right: 16px;
 
         @include tablet-sm {
-            display: flex;
-            gap: 24px;
-        }
-    }
-    &__item {
-        user-select: none;
-
-        @include tablet-sm-below {
-            margin-bottom: 24px;
-        }
-        @include tablet-sm {
-            width: 285px;
-            flex-shrink: 0;
-        }
-    }
-    &__pagination {
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-
-        button[data-as-dot] {
-            width: 26px;
-            height: 10px;
-            margin: 5px;
-            border-radius: 500px;
-            border: none;
-            background: rgba($color: $text-1, $alpha: 0.2);
-            cursor: pointer;
-            transition: $transition;
-
-            &.active {
-                width: 10px;
-                background: $text-1;
-            }
+            flex-direction: row;
         }
     }
 }

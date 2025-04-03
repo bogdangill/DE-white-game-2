@@ -30,10 +30,10 @@
     <h2 class="title games__title">
         Spiele erkunden
     </h2>
-    <div class="games__slider-container" data-as-container>
-        <ul class="games__list" data-as-slider>
+    <div class="games__slider-container wg-slider" data-wg-container>
+        <ul class="games__list wg-slider__inner" data-wg-slider>
             {% for item in games %}
-                <li class="games__item" data-as-slide>
+                <li class="wg-slider__slide" data-wg-slide>
                     <div class="game-card">
                         <img src="games/{{item.title}}/preview.png" alt="{{item.title}}" class="game-card__img">
                         <div class="game-card__body">
@@ -51,6 +51,6 @@
                 </li>
             {%endfor%}
         </ul>
-        <div class="games__pagination" data-as-pagination></div>
+        <div class="wg-slider__pagination" data-wg-pagination></div>
     </div>
 </section>
