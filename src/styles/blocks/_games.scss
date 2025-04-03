@@ -7,12 +7,17 @@
         margin-bottom: 16px;
     }
     &__list {
-        flex-direction: column !important;
+        flex-direction: column;
         gap: 24px;
         padding-right: 16px;
 
         @include tablet-sm {
             flex-direction: row;
+        }
+    }
+    &__slider-container {
+        @include tablet-sm {
+            overflow: visible !important;
         }
     }
 }

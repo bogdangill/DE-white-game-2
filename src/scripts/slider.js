@@ -1,6 +1,5 @@
 export class WhiteGameSlider {
     selectors = {
-        container: '[data-wg-container]',
         slider: '[data-wg-slider]',
         slide: '[data-wg-slide]',
         pagination: '[data-wg-pagination]',
@@ -11,10 +10,10 @@ export class WhiteGameSlider {
         slideGap: '24px'
     }
 
-    constructor(options = {}) {   
+    constructor(targetSelector, options = {}) {   
         this.options = {...this.defaultOptions, ...options};
         
-        this.sliderContainer = document.querySelector(this.selectors.container);
+        this.sliderContainer = document.querySelector(targetSelector);
         
         if (!this.sliderContainer) return
 
@@ -23,7 +22,6 @@ export class WhiteGameSlider {
         this.pagination = this.sliderContainer.querySelector(this.selectors.pagination);
 
         this.slideWidth = this.options.slideWidth;
-        console.log(this.slideWidth);
         this.slideGap = this.options.slideGap;
 
         this.totalSlideWidth = this._calculateTotalSlideWidth();

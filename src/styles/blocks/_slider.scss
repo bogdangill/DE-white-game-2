@@ -1,12 +1,16 @@
 @use '../helpers' as *;
 
 .wg-slider {
+    max-width: 100%;
+    overflow: hidden;
+
     &__inner {
         display: flex;
         flex-direction: row;
         transition: transform .2s ease-in-out;
     }
     &__slide {
+        max-width: 100%;
         user-select: none;
         flex-shrink: 0;
     }
