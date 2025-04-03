@@ -1,0 +1,53 @@
+{% set games = [
+    {
+        title: 'CARS',
+        text: 'CARS ist ein fesselndes Online-Spiel, das die Spieler in die harte und unerbittliche Realität einer post-apokalyptischen Welt eintauchen lässt.',
+        link: 'game1'
+    },
+    {
+        title: 'Halloween-Match-3',
+        text: 'Verbinde Kürbisse, Geister und Süßigkeiten in diesem kniffligen Match-3-Spiel mit über 100 Leveln, magischen Power-Ups und einer süßen Halloween-Story. Besiege Vampire und Hexen, sammle Leckereien und rette das Spukhaus vor dem Fluch! Kostenlos für iOS, Android und PC – perfekt für schnelle Spielrunden mit Gruselfaktor.',
+        link: 'game2'
+    },
+    {
+        title: 'Monsters-Match-3',
+        text: 'Sammle Power-Ups wie "Laser-Auge" und befreie die Monster-Fabrik von Dr. Knuddel. Kostenlos mit optionalen Boosts – süchtig machender Puzzlespaß für die ganze Familie!',
+        link: 'game3'
+    },
+    {
+        title: 'Scary-Run',
+        text: 'Fliehe vor hungrigen Zombies, springe über Gräber und sammle magische Talismane, um den Fluch des alten Friedhofs zu brechen. Mit atemberaubenden 3D-Grafiken, fiesen Bosskämpfen und täglichen Horror-Challenges – dein Adrenalin wird pumpen!',
+        link: 'game4'
+    },
+    {
+        title: 'Splishy-Fish',
+        text: 'Steuere deinen kleinen Fisch durch korallenreiche Riffe, sammle glitzernde Perlen und entkomme hungrigen Haien in diesem temporeichen Endless-Runner. Mit über 50 einzigartigen Fisch-Skins und täglichen Ozean-Challenges – perfekt für schnelle Spielrunden voller Spaß!',
+        link: 'game5'
+    }
+] %}
+
+<section class="games mb-section">
+    <h2 class="title games__title">
+        Spiele erkunden
+    </h2>
+    <ul class="games__list">
+        {% for item in games %}
+            <li class="games__item">
+                <div class="game-card">
+                    <img src="games/{{item.title}}/preview.png" alt="{{item.title}}" class="game-card__img">
+                    <div class="game-card__body">
+                        <h3 class="game-card__title">
+                            {{item.title}}
+                        </h3>
+                        <p class="game-card__text">
+                            {{item.text}}
+                        </p>
+                        <a href="{{item.link}}.html" class="button game-card__button">
+                            Spielen
+                        </a>
+                    </div>
+                </div>
+            </li>
+        {%endfor%}
+    </ul>
+</section>

@@ -65,9 +65,9 @@ function scripts() {
         .pipe(browserSync.stream());
 }
 
-function fonts() {
-    return src(`./src/fonts/*.woff2`)
-        .pipe(dest(`./dist/fonts`))
+function games() {
+    return src(`./src/games/**`, {encoding: false})
+        .pipe(dest(`./dist/games`))
 }
 
 function browsersync() {
@@ -98,12 +98,12 @@ exports.scripts = scripts
 exports.styles = styles
 exports.html = html
 exports.images = images
-exports.fonts = fonts
+exports.games = games
 exports.purgecss = purgecss
 exports.copyscss = copySCSS
 exports.clean = clean
 
-const compileDist = parallel(styles, scripts, images, fonts, html, copySCSS);
+const compileDist = parallel(styles, scripts, images, html, copySCSS, games);
 
 //выполнение сценария по умолчанию
 exports.dev = series(clean, compileDist, parallel(browsersync, observer));

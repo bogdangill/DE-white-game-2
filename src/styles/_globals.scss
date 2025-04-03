@@ -4,6 +4,7 @@ html {
     font-family: $font-primary;
     color: $text-1;
     font-weight: 600;
+    overflow-x: hidden;
 
     &.is-lock{
 		overflow: hidden;
@@ -11,7 +12,7 @@ html {
 }
 
 body {
-    background-color: $bg-main
+    background-color: $bg-main;
 }
 
 svg image {
