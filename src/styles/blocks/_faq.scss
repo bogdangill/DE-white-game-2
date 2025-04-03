@@ -1,0 +1,41 @@
+@use '../helpers' as *;
+
+.faq {
+    &__title {
+        margin-bottom: 16px;
+    }
+}
+
+.faq-feature {
+    display: grid;
+    gap: 24px;
+    
+    &__answer {
+        font-size: 12px;
+        line-height: 14px;
+        min-height: 224px;
+        background-color: $bg-covers;
+        padding: 20px;
+        border-radius: $brad;
+    }
+    &__item {
+        display: grid;
+        gap: 24px;
+    }
+}
+
+.faq-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 9px 20px;
+    background-color: $bg-covers;
+    border-radius: $brad;
+
+    &__text {
+        font-size: 18px;
+        line-height: 20px;
+        text-transform: uppercase;
+        margin: 0;
+    }
+}

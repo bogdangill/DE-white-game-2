@@ -1,0 +1,61 @@
+{% set faqs = [
+    [
+        {
+            title: 'Wie kann ich an der Beta-Testung neuer Spiele teilnehmen?',
+            text: 'In einigen Spielen gibt es die Möglichkeit, private Matches oder Turniere zu erstellen, in denen du ausschließlich mit deinen Freunden spielen kannst.'
+        },
+        {
+            title: 'Ist es möglich, private Spiele oder Turniere mit Freunden zu organisieren?',
+            text: 'In einigen Spielen gibt es eine Funktion, mit der Sie private Spiele oder Turniere erstellen können, bei denen sie ausschließlich mit Ihren Freunden spielen können.'
+        }
+    ],
+    [
+        {
+            title: 'Wie entdecke ich neue Spiele und Updates?',
+            text: 'Folgen Sie den Nachrichten und abonnieren Sie die ne cumsletter Ihrer Lieblingsstudios.'
+        },
+        {
+            title: 'Verfügt die Site über Funktionen zum Erstellen von Clans oder Gruppen und zum Beitreten?',
+            text: 'Die Site verfügt über Funktionen zum Erstellen und beitreten von Clans/Gruppen.'
+        }
+    ],
+    [
+        {
+            title: 'Kann ich meine eigenen Levels in Spielen erstellen?',
+            text: 'Ja, viele Spiele bieten Tools zum Erstellen von Levels. Überprüfen Sie den Karteneditor oder den sandbo-Modus in dem Spiel, an dem Sie interessiert sind.'
+        },
+        {
+            title: 'Kann ich controller oder andere controller verwenden?',
+            text: 'Moderna Gaming unterstützt Gamepads und andere controller. Überprüfen Sie die Kompatibilität des Geräts mit einem bestimmten Spiel oder einer bestimmten Plattform.'
+        }
+    ]
+] %}
+
+<section class="faq">
+    <h2 class="title faq__title">
+        Allgemeine Fragen
+    </h2>
+    <div class="faq-feature">
+        <p class="faq-feature__answer">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima atque in ad est quibusdam nam accusantium dolore, debitis quasi earum illo error recusandae repellendus, sequi sint laborum iure tempore quaerat.
+        </p>
+        <div class="faq-feature__container">
+            <ul class="faq-feature__list">
+                {% for item in faqs %}
+                    <li class="faq-feature__item">
+                        {% for card in item %}
+                            <div class="faq-item">
+                                <img src="images/ask.png" alt="" class="faq-item__icon">
+                                <p class="faq-item__text" data-faq-answer="{{card.text}}">
+                                    {{card.title}}
+                                </p>
+                            </div>
+                        {% endfor %}
+                    </li>
+                {% endfor %}
+            </ul>
+            <div class="faq-feature__dots">
+            </div>
+        </div>
+    </div>
+</section>
