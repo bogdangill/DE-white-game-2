@@ -37,6 +37,7 @@ export class WhiteGameSlider {
     }
 
     init() {
+        if (!this.slider) return;
         this.slider.style.gap = this.slideGap;
         this.slides.forEach(slide => slide.style.width = this.slideWidth);
 

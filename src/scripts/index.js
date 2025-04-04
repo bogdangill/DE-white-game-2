@@ -1,5 +1,6 @@
 import { Faq } from "./faq.js";
 import Form from "./form.js";
+import { Nav, Popup } from "./nav.js";
 import { WhiteGameSlider } from "./slider.js";
 
 const gameSlider = new WhiteGameSlider('.games__slider-container', {
@@ -17,3 +18,6 @@ faq.init();
 
 const form = new Form();
 form.init();
+
+const popup = new Popup();
+const nav = new Nav();

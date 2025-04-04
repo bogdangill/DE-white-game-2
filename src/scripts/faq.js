@@ -8,7 +8,6 @@ export class Faq {
 
     constructor() {
         this.root = document.querySelector(this.selectors.target);
-
         if (!this.root) return;
 
         this.questions = this.root.querySelectorAll(this.selectors.question);
@@ -16,6 +15,8 @@ export class Faq {
     }
 
     init() {
+        if (!this.root) return;
+
         this._bindEvents();
         this.showAnswer(this.questions[0]);
     }
