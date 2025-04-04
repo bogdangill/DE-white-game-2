@@ -32,7 +32,7 @@ export class WhiteGameSlider {
         this.startX = 0;
         this.currentTranslate = 0;
         this.prevTranslate = 0;
-        this.visibleSlides = Math.floor(this.sliderContainer.clientWidth / this.totalSlideWidth);
+        this.visibleSlides = Math.round(this.sliderContainer.clientWidth / this.totalSlideWidth);
         this.totalDots = Math.max(this.slides.length - this.visibleSlides + 1) //чтоб хотябы один дот был;
     }
 
