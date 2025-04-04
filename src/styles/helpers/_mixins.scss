@@ -13,7 +13,7 @@
     padding-left: $padding-x;
     padding-right: $padding-x;
 
-    @include desktop-md {
+    @include desktop-sm {
         padding: 0 calc(50vw - $half-width);
     }
 }
