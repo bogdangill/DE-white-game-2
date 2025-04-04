@@ -1,4 +1,5 @@
 import { Faq } from "./faq.js";
+import Form from "./form.js";
 import { WhiteGameSlider } from "./slider.js";
 
 const gameSlider = new WhiteGameSlider('.games__slider-container', {
@@ -13,3 +14,6 @@ faqSlider.init();
 
 const faq = new Faq();
 faq.init();
+
+const form = new Form();
+form.init();

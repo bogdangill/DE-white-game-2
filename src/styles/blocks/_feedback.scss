@@ -1,0 +1,76 @@
+@use '../helpers' as *;
+
+.feedback {
+    &__title {
+        margin-bottom: 16px;
+    }
+}
+
+.feedback-form {
+    background-color: $bg-covers;
+    border-radius: $brad;
+    padding: 20px;
+
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__grid {
+        display: grid;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    &__input {
+        font-size: 14px;
+        line-height: 16px;
+        padding: 16px 20px;
+        border-radius: 10px;
+        background-color: $form;
+        border: 0;
+
+        &::placeholder {
+            color: rgba($color: $text-1, $alpha: 0.2);
+        }
+    }
+    &__label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 40px;
+    }
+    &__checkbox {
+        width: 30px;
+        height: 30px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        padding: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        cursor: pointer;
+        background-color: $bg-covers;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: $transition;
+        border: 2px solid $text-1;
+
+        &:checked{
+            background-color: $success;
+            border-color: $success;
+        }
+        &:checked::before {
+            content: "✔";
+			color: $bg-covers;
+			font-size: 24px;
+			line-height: 1;
+			font-weight: bold;
+        }
+    }
+    &__link {
+        font-size: 12px;
+        line-height: 14px;
+        color: $text-1;
+        text-decoration: none;
+    }
+}
