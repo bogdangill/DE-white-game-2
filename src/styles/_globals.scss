@@ -53,6 +53,8 @@ footer {
 
     @include tablet-md {
         margin-left: 0;
+    }
+    @include desktop-md {
         margin-right: 0;
     }
 }
