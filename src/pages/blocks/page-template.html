@@ -29,7 +29,8 @@
             <a data-nav-link href="/terms.html" class="menu__link menu__link--terms">Nutzungsbedingungen</a>
         </nav>
     </div>
-    {% include "header.html" %}
+    {% block header %}
+    {% endblock %}
     <main>
         {% block main %}
         {% endblock %}
