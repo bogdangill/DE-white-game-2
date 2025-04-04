@@ -1,0 +1,131 @@
+{% set winners = [
+    {
+        name: 'Shadowix',
+        lvl: 'Dreadcaptain ',
+        price: '1',
+        ava: 'avatar_06'
+    },
+    {
+        name: 'Nyxarion',
+        lvl: 'Dreadcaptain ',
+        price: '2',
+        ava: 'avatar_07'
+    },
+    {
+        name: 'Obsidyan',
+        lvl: 'Dreadcaptain ',
+        price: '3',
+        ava: 'avatar_08'
+    }
+] %}
+{% set finalists = [
+    {
+        name: 'RustyCutlass',
+        lvl: 'Bloodbosun ',
+        price: '$7 350',
+        ava: 'avatar_09'
+    },
+    {
+        name: 'GhostBucc...',
+        lvl: 'Bloodbosun ',
+        price: '$7 350',
+        ava: 'avatar_10'
+    },
+    {
+        name: 'CursedNav...',
+        lvl: 'Bloodbosun ',
+        price: '$7 350',
+        ava: 'avatar_11'
+    },
+    {
+        name: 'Bonebeard',
+        lvl: 'Cursebringer ',
+        price: '$5 350',
+        ava: 'avatar_12'
+    },
+    {
+        name: 'RogueTide',
+        lvl: 'Cursebringer ',
+        price: '$5 350',
+        ava: 'avatar_13'
+    },
+    {
+        name: 'ScarSailor',
+        lvl: 'Cursebringer ',
+        price: '$5 350',
+        ava: 'avatar_14'
+    },
+    {
+        name: 'VoodooJack',
+        lvl: 'Stormgunner  ',
+        price: '$3 350',
+        ava: 'avatar_15'
+    },
+    {
+        name: 'ReaperGall...',
+        lvl: 'Stormgunner',
+        price: '$3 350',
+        ava: 'avatar_16'
+    },
+    {
+        name: 'SerpentSkull',
+        lvl: 'Stormgunner',
+        price: '$3 350',
+        ava: 'avatar_17'
+    }
+] %}
+
+<section class="winners mb-section">
+    <h2 class="title winners__title">
+        Gewinner
+    </h2>
+    <div class="winners__grid">
+        <div class="players-history">
+            <h3 class="title title--sm players-history__title">
+                Preisträger
+            </h3>
+            {% for item in winners %}
+                <div class="player-item">
+                    <img src="images/{{item.ava}}.png" alt="{{item.name}}" class="player-item__ava">
+                    <div class="player-item__block">
+                        <h4 class="player-item__name">
+                            {{item.name}}
+                        </h4>
+                        <p class="player-item__lvl">
+                            Dreadcaptain
+                        </p>
+                    </div>
+                    <div class="player-item__block">
+                        <img src="images/{{item.price}}.png" alt="" class="player-item__ava">
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="players-history players-history--grid">
+            <h3 class="title title--sm players-history__title">
+                Finalist
+            </h3>
+            {% for item in finalists %}
+                <div class="player-item">
+                    <img src="images/{{item.ava}}.png" alt="{{item.name}}" class="player-item__ava">
+                    <div class="player-item__block">
+                        <h4 class="player-item__name">
+                            {{item.name}}
+                        </h4>
+                        <p class="player-item__lvl">
+                            Dreadcaptain
+                        </p>
+                    </div>
+                    <div class="player-item__block">
+                        <p class="player-item__text">
+                            Gewonnen:
+                        </p>
+                        <div class="player-item__price">
+                            {{item.price}}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

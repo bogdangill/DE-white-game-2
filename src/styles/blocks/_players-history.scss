@@ -1,32 +1,51 @@
 @use '../helpers' as *;
 
 .players-history {
-    max-height: 329px;
-    min-width: 325px;
-    overflow-y: scroll;
+    min-width: 285px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     background-color: $bg-covers;
     border-radius: $brad;
-    padding: 20px 20px 0 20px;
+    padding: 20px;
+
+    &--fixed {
+        max-height: 329px;
+        overflow-y: scroll;
+    }
+    &--grid {
+        @include tablet-md {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .players-history__title {
+                flex-grow: 1;
+                width: 100%;
+            }
+        }
+        @include desktop-sm {
+            column-gap: 60px;
+        }
+    }
 
     @include tablet-md {
         margin-left: 0;
     }
 
     &__title {
-        margin-bottom: 16px;
+        margin-bottom: 0;
     }
 }
 
 .player-item {
     display: grid;
-    grid-template-columns: 45px 2fr .5fr;
+    grid-template-columns: 45px 1fr auto;
+    justify-content: space-between;
     gap: 10px;
-    margin-bottom: 20px;
+    min-width: 245px;
+    flex-grow: 1;
 
-    &__ava {
-        width: 45px;
-        height: 45px;
-    }
     &__name {
         font-size: 14px;
         line-height: 16px;
