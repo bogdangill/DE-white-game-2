@@ -21,7 +21,13 @@ svg image {
 }
 
 .wrapper {
-    @include container(1440px, 0);
+    @include container($container-width, 0);
+
+    @include tablet-md {
+        display: grid;
+        grid-template-columns: 148px 1fr;
+        column-gap: 40px;
+    }
 }
 
 .row-tablet-md {
@@ -46,7 +52,8 @@ footer {
     margin-left: 16px;
 
     @include tablet-md {
-        margin-left: 40px;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 

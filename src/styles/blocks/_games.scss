@@ -2,6 +2,7 @@
 
 .games {
     margin-right: 0;
+    max-width: calc($container-width - 188px);
 
     &__title {
         margin-bottom: 16px;

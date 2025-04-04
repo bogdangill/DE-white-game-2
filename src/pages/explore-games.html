@@ -1,29 +1,22 @@
 {% extends "page-template.html" %}
 
 {% block metaTitle %}
-    home
+    Spiele erkunden
 {% endblock %}
 
 {% block main %}
     <div class="row-tablet-md mb-section">
         <section class="promo">
             <h2 class="title title--xl promo__title">
-                Unity Hub!
+                Spiele<br> erkunden
             </h2>
             <p class="promo__text">
-                Deine Reise in die Welt der Spiele beginnt hier. Schließe dich uns an und entdecke neue, aufregende Welten.
+                Wir haben diesen Ort speziell für Gaming-Enthusiasten geschaffen
             </p>
-            <a class="button promo__btn" href="#form">
-                Abonniere die Unternehmensnachrichten
-            </a>
         </section>
         {% include "players-history.html" %}
     </div>
     {% include "bonus.html" %}
     {% include "games.html" %}
-    {% include "about.html" %}
-    {% include "steps.html" %}
-    {% include "faq.html" %}
     {% include "winners.html" %}
-    {% include "feedback.html" %}
 {% endblock %}
