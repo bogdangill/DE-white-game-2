@@ -1,0 +1,62 @@
+{% set members = [
+    {
+        ava: 'avatar_18',
+        name: 'Andreas Vlasov',
+        profession: 'CEO, Gründer',
+        text: 'Entwickelt die Unternehmensstrategie, zieht Investitionen an und trifft wichtige Geschäftsentscheidungen.'
+    },
+    {
+        ava: 'avatar_19',
+        name: 'Irina Smirnow',
+        profession: 'UX/UI-Designer',
+        text: 'Gestaltet benutzerfreundliche und ästhetische Interfaces, optimiert die User Experience.'
+    },
+    {
+        ava: 'avatar_20',
+        name: 'Maxim Petrow',
+        profession: 'Frontend-Entwickler',
+        text: 'Kümmert sich um das Layout und die interaktiven Elemente der Website, sorgt für eine reibungslose Darstellung auf verschiedenen Geräten.'
+    },
+    {
+        ava: 'avatar_21',
+        name: 'Svetlana Romanowa',
+        profession: 'Backend-Entwicklerin',
+        text: 'Verwaltet die Serverstruktur und Datenbanken, stellt die Geschwindigkeit und Sicherheit der Website sicher.'
+    },
+    {
+        ava: 'avatar_22',
+        name: 'Dmitri Sokolow',
+        profession: 'SEO-Spezialist',
+        text: 'Optimiert die Website für Suchmaschinen, verwaltet Online-Werbung und erhöht den Traffic.'
+    },
+    {
+        ava: 'avatar_23',
+        name: 'Katharina Lebedewa',
+        profession: 'Content-Managerin',
+        text: 'Befüllt die Website mit Texten, Bildern und Videos, hält die Inhalte aktuell.'
+    }
+] %}
+
+<section class="team mb-section">
+    <h2 class="title team__title">
+        Das Gründerteam
+    </h2>
+    <ul class="team__list">
+        {% for item in members %}
+            <li class="team-card">
+                <img src="images/avatars/{{item.ava}}.png" alt="" class="team-card__ava">
+                <section class="team-card__text">
+                    <h3 class="team-card__name">
+                        {{item.name}}
+                    </h3>
+                    <h4 class="team-card__profession">
+                        {{item.profession}}
+                    </h4>
+                    <p class="team-card__description">
+                        {{item.text}}
+                    </p>
+                </section>
+            </li>
+        {% endfor %}
+    </ul>
+</section>

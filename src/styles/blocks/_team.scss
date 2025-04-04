@@ -1,0 +1,66 @@
+@use '../helpers' as *;
+
+.team {
+    &__title {
+        margin-bottom: 16px;
+    }
+    &__list {
+        display: grid;
+        gap: 24px;
+
+        @include tablet-sm {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+.team-card {
+    width: 100%;
+    background: $bg-dev-grad;
+    border-radius: $brad;
+    overflow: hidden;
+
+    @include laptop {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    &__ava {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+
+        @include laptop {
+            height: 100%;
+            width: 200px;
+        }
+    }
+    &__text {
+        padding: 20px;
+        margin: 0;
+
+        @include laptop {
+            padding-top: 30px;
+        }
+    }
+    &__name {
+        color: $bg-covers;
+        font-size: 20px;
+        line-height: 23px;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+    }
+    &__profession {
+        font-size: 12px;
+        line-height: 14px;
+        color: rgba($color: $text-1, $alpha: 0.5);
+        margin-bottom: 16px;
+    }
+    &__description {
+        font-size: 16px;
+        line-height: 18px;
+        color: $bg-covers;
+        margin: 0;
+    }
+}
