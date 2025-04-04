@@ -1,0 +1,112 @@
+@use '../helpers' as *;
+
+.menu {
+    position: relative;
+    z-index: 2;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: $bg-covers;
+    grid-row: span 2;
+    overflow: hidden;
+    border-radius: 10px;
+    display: none;
+
+    @include tablet-md-below {
+        position: fixed;
+        top: 30px;
+        left: 16px;
+    }
+
+    @include tablet-md {
+        display: flex;
+        gap: 40px;
+        padding: 24px 34px;
+    }
+
+    &.is-active {
+        display: flex;
+    }
+
+    &__link {
+        display: block;
+        width: 80px;
+        height: 80px;
+        background-color: transparent;
+        border-radius: 10px;
+        font-size: 0;
+
+        &.is-active {
+            box-shadow: 2px 19px 31px 0px rgba(0, 0, 0, 0.06);
+        }
+
+        &--home {
+            @include backgroundImg("house_2");
+
+            &.is-active {
+                @include backgroundImg("house_1");
+            }
+        }
+        &--games {
+            @include backgroundImg("Explore games_2");
+
+            &.is-active {
+                @include backgroundImg("Explore games_1");
+            }
+        }
+        &--we {
+            @include backgroundImg("who_we_are_2");
+
+            &.is-active {
+                @include backgroundImg("who_we_are_1");
+            }
+        }
+        &--code {
+            @include backgroundImg("code_of_conduct_2");
+
+            &.is-active {
+                @include backgroundImg("code_of_conduct_1");
+            }
+        }
+        &--contacts {
+            @include backgroundImg("contacts_2");
+
+            &.is-active {
+                @include backgroundImg("contacts_1");
+            }
+        }
+        &--private {
+            @include backgroundImg("privacy_policy_2");
+
+            &.is-active {
+                @include backgroundImg("privacy_policy_1");
+            }
+        }
+        &--terms {
+            @include backgroundImg("terms_of_use_2");
+
+            &.is-active {
+                @include backgroundImg("terms_of_use_1");
+            }
+        }
+    }
+    &__close {
+        //DRY
+        width: 40px;
+        height: 40px;
+        background-color: $bg-covers;
+        background-image: url("images/x.png");
+        background-position: center;
+        border: 0;
+        border-radius: 10px;
+        transition: $transition;
+
+        &:active {
+            transform: scale(.96);
+        }
+
+        @include tablet-md {
+            display: none;
+        }
+    }
+}
