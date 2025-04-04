@@ -2,37 +2,57 @@
     <h2 class="title feedback__title">
         Abonniere jetzt!
     </h2>
-    <form class="feedback-form" data-js-form>
-        <h3 class="title title--sm feedback-form__title">
-            Tritt unserer Gaming-Community bei
-        </h3>
-        <div class="feedback-form__grid">
-            <input class="feedback-form__input" 
-                type="text" 
-                placeholder="Gib deinen Namen ein" 
-                required 
-                data-js-input="name">
-            <input class="feedback-form__input" 
-                type="tel"
-                pattern="(?:\+|\b)(?:\d\s?\(?|\d{2}\s?\(?)?(?:[\d\-\(\)\s]{6,14}\d)" 
-                placeholder="Gib deine Telefonnummer ein" 
-                required
-                data-js-input="phone">
-            <input class="feedback-form__input" 
-                type="mail"
-                pattern="^\S+@\S+\.\S+$" 
-                placeholder="Gib deine E-Mail-Adresse ein" 
-                required
-                data-js-input="mail">
+    <div class="feedback__grid">
+        <form class="feedback-form" data-js-form>
+            <h3 class="title title--sm feedback-form__title">
+                Tritt unserer Gaming-Community bei
+            </h3>
+            <div class="feedback-form__grid">
+                <input class="feedback-form__input" 
+                    type="text" 
+                    placeholder="Gib deinen Namen ein" 
+                    required 
+                    data-js-input="name">
+                <input class="feedback-form__input" 
+                    type="tel"
+                    pattern="(?:\+|\b)(?:\d\s?\(?|\d{2}\s?\(?)?(?:[\d\-\(\)\s]{6,14}\d)" 
+                    placeholder="Gib deine Telefonnummer ein" 
+                    required
+                    data-js-input="phone">
+                <input class="feedback-form__input" 
+                    type="mail"
+                    pattern="^\S+@\S+\.\S+$" 
+                    placeholder="Gib deine E-Mail-Adresse ein" 
+                    required
+                    data-js-input="mail">
+            </div>
+            <label class="feedback-form__label">
+                <input class="feedback-form__checkbox" type="checkbox" name="privacy" data-js-checkbox="privacy">
+                <a href="./privacy.html" class="feedback-form__link">
+                    Ich akzeptiere die Datenschutzrichtlinie
+                </a>
+            </label>
+            <button type="submit" class="button feedback-form__button">
+                Abonniere unseren Newsletter
+            </button>
+        </form>
+        <div class="feedback-hints">
+            <h3 class="title feedback-hints__title">
+                Was kommt als nächstes?
+            </h3>
+            <p class="feedback-hints__description">
+                Sie stehen kurz davor, eine Bestätigungs-E-Mail zu erhalten. Bitte nehmen Sie sich einen Moment Zeit, um Ihren Posteingang zu überprüfen (und einen Blick in die Ordner 'Spam' oder 'Junk' zu werfen, falls er fehlt).<br>
+                Unsere kommenden Newsletter werden randvoll mit den neuesten Updates, Sonderangeboten, bevorstehenden Veranstaltungen und exklusiven Angeboten nur für Mitglieder sein.
+                Sollten Fragen oder Erkenntnisse auftauchen, sind wir nur eine Nachricht entfernt. Ihr Input wird sehr geschätzt und ist immer willkommen.
+            </p>
+            <h3 class="title title--sm feedback-hints__title">
+                Ein hilfreicher Hinweis:
+            </h3>
+            <p class="feedback-hints__description">
+                Erwägen Sie, unsere E-Mail zu Ihren Kontakten hinzuzufügen. Dies stellt sicher, dass unsere zukünftigen Mitteilungen direkt in Ihrem Posteingang erscheinen und die Ordner 'Spam' oder 'Werbeaktionen' umgehen.<br>
+                Wir freuen uns, Sie zu uns zu zählen! Machen Sie sich bereit für eine Fülle ansprechender und nützlicher Inhalte.
+                Mit unseren herzlichsten Grüßen!
+            </p>
         </div>
-        <label class="feedback-form__label">
-            <input class="feedback-form__checkbox" type="checkbox" name="privacy" data-js-checkbox="privacy">
-            <a href="./privacy.html" class="feedback-form__link">
-                Ich akzeptiere die Datenschutzrichtlinie
-            </a>
-        </label>
-        <button type="submit" class="button feedback-form__button">
-            Abonniere unseren Newsletter
-        </button>
-    </form>
+    </div>
 </section>
