@@ -1,0 +1,37 @@
+@use '../helpers' as *;
+
+.game-description {
+    display: grid;
+    align-items: start;
+    gap: 30px;
+
+    @include tablet-md {
+        grid-template-columns: auto 1fr;
+        row-gap: 16px;
+    }
+
+    &__title {
+        margin: 0;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 120px);
+        gap: 55px;
+        justify-content: center;
+        background-color: $bg-covers;
+        border-radius: $brad;
+        padding: 48px 30px;
+
+        @include tablet-sm {
+            padding: 30px;
+        }
+    }
+
+    .game-card {
+        order: -1;
+
+        @include tablet-md {
+            grid-row: span 2;
+        }
+    }
+}

@@ -46,6 +46,15 @@
     min-width: 245px;
     flex-grow: 1;
 
+    &--vertical {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 6px;
+        min-width: 120px;
+    }
+    
     &__name {
         font-size: 14px;
         line-height: 16px;

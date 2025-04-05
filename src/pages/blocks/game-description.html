@@ -1,0 +1,73 @@
+{% set players = [
+    {
+        name: 'wilder_pirat_458',
+        lvl: 'Level: 15',
+        price: '$1 900'
+    },
+    {
+        name: 'vix_27',
+        lvl: 'Level: 11',
+        price: '$1 400'
+    },
+    {
+        name: 'nyxar-echo',
+        lvl: 'Level: 19',
+        price: '$4 520'
+    },
+    {
+        name: 'ThunderRunner-4',
+        lvl: 'Level: 24',
+        price: '$7 856'
+    },
+    {
+        name: 'black Jack_154',
+        lvl: 'Level: 22',
+        price: '$7 389'
+    }
+] %}
+
+<section class="game-description mb-section">
+    <h2 class="title game-description__title">
+        Über das Spiel
+    </h2>
+    <div class="game-description__list">
+        {% for item in players %}
+            <div class="player-item player-item--vertical">
+                <img src="images/avatars/avatar_24.png" alt="{{item.name}}" class="player-item__ava">
+                <h3 class="player-item__name">
+                    {{item.name}}
+                </h3>
+                <p class="player-item__lvl">
+                    {{item.lvl}}
+                </p>
+                <div class="player-item__price">
+                    {{item.price}}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="game-card">
+        <img src="games/CARS/preview.png" alt="CARS" class="game-card__img">
+        <div class="game-card__body">
+            <dl class="game-card__data">
+                <dt class="game-card__key">
+                    Gesamtspieler:
+                </dt>
+                <dd class="game-card__val">
+                    18455
+                </dd>
+            </dl>
+            <dl class="game-card__data">
+                <dt class="game-card__key">
+                    Online-Spieler:
+                </dt>
+                <dd class="game-card__val game-card__val--plus">
+                    4953
+                </dd>
+            </dl>
+            <a href="games/CARS/index.html" class="button game-card__button">
+                Spielen
+            </a>
+        </div>
+    </div>
+</section>
