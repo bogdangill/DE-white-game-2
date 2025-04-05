@@ -1,6 +1,10 @@
 @use '../helpers' as *;
 
 .promo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 320px;
     color: $bg-covers;
     background-color: $bg-promo-blyat;
     padding: 60px 20px;
@@ -10,6 +14,7 @@
 
     @include tablet-sm {
         @include backgroundImg("background_1");
+        min-height: 330px;
     }
     @include tablet-md {
         flex-grow: 1;

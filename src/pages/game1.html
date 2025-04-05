@@ -4,6 +4,25 @@
     CARS
 {% endblock %}
 
+{% block header %}
+    <header class="header">
+        <div class="header__inner">
+            <button class="header__burger" data-popup-trigger></button>
+            <div class="header__search">
+                <img src="images/search.svg" alt="Search Icon" class="header__search-icon">
+                <input type="text" placeholder="Wonach suchen Sie?" class="header__search-input">
+            </div>
+            <img src="images/notifications.png" alt="Notifications">
+        </div>
+    </header>
+{% endblock %}
+
 {% block main %}
-    ыыыы
+    <div class="row-tablet-md mb-section">
+        <section class="promo">
+            <h1 class="title title--xl promo__title">
+                CARS
+            </h1>
+        </section>
+    </div>
 {% endblock %}

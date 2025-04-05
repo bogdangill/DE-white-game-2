@@ -26,6 +26,7 @@ svg image {
     @include tablet-md {
         display: grid;
         grid-template-columns: 148px 1fr;
+        align-items: start;
         column-gap: 40px;
 
         &::before {
