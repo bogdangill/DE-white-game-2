@@ -85,8 +85,8 @@
         }
     }
     &__link {
-        font-size: 12px;
-        line-height: 14px;
+        font-size: $font-size;;
+        line-height: $line-height;
         color: $text-1;
         text-decoration: none;
     }
@@ -104,8 +104,8 @@
         margin-bottom: 16px;
     }
     &__description {
-        font-size: 12px;
-        line-height: 14px;
+        font-size: $font-size;;
+        line-height: $line-height;
         margin-bottom: 24px;
 
         &:last-of-type {

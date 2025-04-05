@@ -10,6 +10,16 @@
         row-gap: 16px;
     }
 
+    &--texts {
+        @include tablet-md {
+            grid-template-columns: 1fr 1fr;
+
+            .game-description__title {
+                grid-column: span 2;
+            }
+        }
+    }
+
     &__title {
         margin: 0;
     }
@@ -32,6 +42,63 @@
 
         @include tablet-md {
             grid-row: span 2;
+        }
+    }
+}
+
+.game-description-card {
+    background-color: $bg-covers;
+    padding: 20px;
+    border-radius: $brad;
+
+    &__title {
+        color: $bg-button;
+        margin-bottom: 8px;
+    }
+    &__text {
+        font-size: $font-size;;
+        line-height: $line-height;
+        margin-bottom: 0;
+    }
+    &__data {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 8px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        @include tablet-sm {
+            display: block;
+        }
+    }
+    &__key,
+    &__val {
+        display: inline-block;
+        font-size: $font-size;;
+        line-height: $line-height;
+    }
+    &__key {
+        color: $bg-button;
+    }
+    &__val {
+        margin: 0;
+    }
+}
+
+.game-trends {
+    &__list {
+        display: grid;
+        gap: 24px;
+
+        @include tablet-sm {
+            grid-template-columns: repeat(2, .5fr);
+            align-items: start;
+        }
+        @include laptop {
+            grid-template-columns: repeat(4, .25fr);
         }
     }
 }

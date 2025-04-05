@@ -15,8 +15,8 @@
     }
     
     &__answer {
-        font-size: 12px;
-        line-height: 14px;
+        font-size: $font-size;;
+        line-height: $line-height;
         min-height: 224px;
         background-color: $bg-covers;
         padding: 20px;

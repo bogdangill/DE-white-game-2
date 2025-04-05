@@ -52,8 +52,8 @@
         margin-bottom: 6px;
     }
     &__profession {
-        font-size: 12px;
-        line-height: 14px;
+        font-size: $font-size;;
+        line-height: $line-height;
         color: rgba($color: $text-1, $alpha: 0.5);
         margin-bottom: 16px;
     }

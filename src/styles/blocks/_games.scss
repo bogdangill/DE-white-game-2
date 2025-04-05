@@ -38,6 +38,8 @@
         object-position: center;
     }
     &__body {
+        display: flex;
+        flex-direction: column;
         background-color: $bg-covers;
         padding: 20px;
     }
@@ -48,8 +50,8 @@
         margin-bottom: 10px;
     }
     &__text {
-        font-size: 12px;
-        line-height: 14px;
+        font-size: $font-size;;
+        line-height: $line-height;
         margin-bottom: 20px;
     }
     &__button {
@@ -66,8 +68,8 @@
         }
     }
     &__key {
-        font-size: 12px;
-        line-height: 14px;
+        font-size: $font-size;;
+        line-height: $line-height;
     }
     &__val {
         font-size: 26px;
@@ -83,5 +85,8 @@
         &--plus {
             background-image: url("images/players+.png");
         }
+    }
+    &__rating {
+        margin: 0 auto;
     }
 }

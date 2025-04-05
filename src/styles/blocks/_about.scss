@@ -32,8 +32,8 @@
         object-position: center;
     }
     &__text {
-        font-size: 12px;
-        line-height: 14px;
+        font-size: $font-size;;
+        line-height: $line-height;
         margin: 20px;
     }
 }

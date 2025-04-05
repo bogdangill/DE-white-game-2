@@ -21,6 +21,10 @@
         margin-right: 0;
         margin-bottom: 0;
         padding: 38px 36px;
+
+        &:only-of-type {
+            margin-right: 16px;
+        }
     }
 
     &__title {

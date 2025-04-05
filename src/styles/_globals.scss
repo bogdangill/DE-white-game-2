@@ -12,6 +12,8 @@ html {
 }
 
 body {
+    font-size: $font-size;
+    line-height: $line-height;
     background-color: $bg-main;
 }
 
@@ -83,17 +85,13 @@ footer {
             line-height: 91px;
         }
     }
+    &--lg {
+        font-size: 40px;
+        line-height: 45px;
+    }
     &--sm {
         font-size: 18px;
         line-height: 20px;
-    }
-    &--xs {
-        font-size: 40px;
-        line-height: 50px;
-    }
-    &--xxs {
-        font-size: 30px;
-        line-height: 38px;
     }
 }
 

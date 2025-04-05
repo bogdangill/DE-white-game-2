@@ -61,21 +61,21 @@
         margin-bottom: 6px;
     }
     &__lvl {
-        font-size: 12px;
-        line-height: 14px;
+        font-size: $font-size;;
+        line-height: $line-height;
         margin: 0;
         color: $bg-button;
     }
     &__text {
-        font-size: 12px;
-        line-height: 14px;
+        font-size: $font-size;;
+        line-height: $line-height;
         margin-bottom: 6px;
     }
     &__price {
         display: grid;
         place-items: center;
-        font-size: 12px;
-        line-height: 14px;
+        font-size: $font-size;;
+        line-height: $line-height;
         background: $bg-money-grad;
         border-radius: 30px;
         color: $bg-covers;
