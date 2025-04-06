@@ -25,4 +25,16 @@
     &__description:last-child {
         margin-bottom: 0;
     }
+    &__ol {
+        padding-left: 20px;
+    }
+
+    a {
+        color: $text-1;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
