@@ -40,13 +40,24 @@ svg image {
     }
 }
 
-.row-tablet-md {
-    @include tablet-md {
-        display: flex;
-        gap: 24px;
+.main-rows {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 60px;
+}
 
-        .promo {
-            margin-right: 0;
+.row-tablet-md {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include tablet-md {
+        flex-direction: row;
+        margin-right: 16px;
+
+        * {
+            margin: 0;
         }
     }
 }

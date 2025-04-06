@@ -19,7 +19,7 @@
 {% endblock %}
 
 {% block main %}
-    <div class="row-tablet-md mb-section">
+    <main class="main-rows">
         <section class="promo">
             <h2 class="title title--xl promo__title">
                 Unity Hub!
@@ -31,13 +31,14 @@
                 Abonniere die Unternehmensnachrichten
             </a>
         </section>
-        {% include "players-history.html" %}
-    </div>
-    {% include "bonus.html" %}
-    {% include "games.html" %}
-    {% include "about.html" %}
-    {% include "steps.html" %}
-    {% include "faq.html" %}
-    {% include "winners.html" %}
-    {% include "feedback.html" %}
+        {% include "games.html" %}
+        <div class="row-tablet-md">
+            {% include "players-history.html" %}
+            {% include "steps.html" %}
+        </div>
+        {% include "bonus.html" %}
+        {% include "faq.html" %}
+        {% include "winners.html" %}
+        {% include "feedback.html" %}
+    </main>
 {% endblock %}

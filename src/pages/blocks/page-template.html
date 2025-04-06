@@ -15,26 +15,38 @@
 </head>
 
 <body class="wrapper">
-    <div class="menu" data-nav>
+    <aside class="menu" data-nav>
         <button class="menu__close" data-popup-close>
         </button>
         <img class="menu__logo" src="images/logo.png" alt="logo">
         <nav class="menu__nav">
-            <a data-nav-link href="/" class="menu__link menu__link--home">home</a>
-            <a data-nav-link href="/explore-games.html" class="menu__link menu__link--games">Spiele erkunden</a>
-            <a data-nav-link href="/who-we-are.html" class="menu__link menu__link--we">Wer wir sind</a>
-            <a data-nav-link href="/code-of-conduct.html" class="menu__link menu__link--code">Verhaltenskodex</a>
-            <a data-nav-link href="/contacts.html" class="menu__link menu__link--contacts">Kontakte</a>
-            <a data-nav-link href="/privacy.html" class="menu__link menu__link--private">Privacy Policy</a>
-            <a data-nav-link href="/terms.html" class="menu__link menu__link--terms">Nutzungsbedingungen</a>
+            <a data-nav-link href="/" class="menu__link menu__link--home">
+                home
+            </a>
+            <a data-nav-link href="/who-we-are.html" class="menu__link menu__link--we">
+                Wer wir sind
+            </a>
+            <a data-nav-link href="/explore-games.html" class="menu__link menu__link--games">
+                Spiele erkunden
+            </a>
+            <a data-nav-link href="/code-of-conduct.html" class="menu__link menu__link--code">
+                Verhaltenskodex
+            </a>
+            <a data-nav-link href="/contacts.html" class="menu__link menu__link--contacts">
+                Kontakte
+            </a>
+            <a data-nav-link href="/terms.html" class="menu__link menu__link--terms">
+                Nutzungsbedingungen
+            </a>
+            <a data-nav-link href="/privacy.html" class="menu__link menu__link--private">
+                Privacy Policy
+            </a>
         </nav>
-    </div>
+    </aside>
     {% block header %}
     {% endblock %}
-    <main>
-        {% block main %}
-        {% endblock %}
-    </main>
+    {% block main %}
+    {% endblock %}
     {% include "banner.html" %}
     <script src="./scripts/index.js" type="module" defer></script>
 </body>

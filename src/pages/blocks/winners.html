@@ -74,8 +74,22 @@
         ava: 'avatar_17'
     }
 ] %}
+{% set cards = [
+    {
+        img: 'about_us_01',
+        text: 'Wir haben diesen Ort speziell für Gaming-Enthusiasten geschaffen. Hier findest du Spiele für jeden Geschmack, die dich in eine erstaunliche Welt voller Abenteuer und Entdeckungen entführen. Auf der Seite findet jeder etwas Besonderes und Interessantes für sich.'
+    },
+    {
+        img: 'about_us_02',
+        text: 'Schließe dich uns an und beginne jetzt zu spielen! Tauche ein in eine Welt der Spiele voller erstaunlicher Geschichten und aufregender Abenteuer.'
+    },
+    {
+        img: 'about_us_03',
+        text: 'Auf Unity Hub findest du viele interessante Spiele, die dir ein unvergessliches Erlebnis bieten. Diese Seite ist perfekt für alle, die das Gaming lieben und nach etwas Neuem und Aufregendem suchen.'
+    }
+] %}
 
-<section class="winners mb-section">
+<section class="winners">
     <h2 class="title winners__title">
         Gewinner
     </h2>
@@ -126,6 +140,21 @@
                     </div>
                 </div>
             {% endfor %}
+        </div>
+        <div class="about">
+            <h2 class="title about__title">
+                Über uns
+            </h2>
+            <ul class="about__list">
+                {% for item in cards %}
+                    <li class="about-card">
+                        <img src="images/{{item.img}}.png" alt="" class="about-card__image">
+                        <p class="about-card__text">
+                            {{item.text}}
+                        </p>
+                    </li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
 </section>

@@ -20,9 +20,9 @@
     border-radius: $brad;
     overflow: hidden;
 
-    @include laptop {
+    @include desktop-sm {
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
     }
 
     &__ava {
@@ -31,16 +31,16 @@
         object-fit: cover;
         object-position: center;
 
-        @include laptop {
+        @include desktop-sm {
             height: 100%;
-            width: 200px;
+            width: 150px;
         }
     }
     &__text {
         padding: 20px;
         margin: 0;
 
-        @include laptop {
+        @include desktop-sm {
             padding-top: 30px;
         }
     }

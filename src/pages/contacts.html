@@ -18,36 +18,38 @@
 {% endblock %}
 
 {% block main %}
-    <section class="promo mb-section">
-        <h1 class="title title--xl promo__title">
-            Kontakte
-        </h1>
-        <p class="promo__text">
-            Schreiben Sie uns
-        </p>
-    </section>
-    <address class="contacts-list mb-section">
-        <div class="contacts-list__item">
-            <p class="contacts-list__text">
-                Shop 20a/508-516 Old Northern Rd, Dural NSW 2158, Australien
+    <main class="main-rows">
+        <section class="promo">
+            <h1 class="title title--xl promo__title">
+                Kontakte
+            </h1>
+            <p class="promo__text">
+                Schreiben Sie uns
             </p>
-        </div>
-        <div class="contacts-list__item">
-            <p class="contacts-list__text">
-                Telefonnummer
-            </p>
-            <p class="contacts-list__text contacts-list__text--lg">
-                +61 3 6234 3549
-            </p>
-        </div>
-        <div class="contacts-list__item">
-            <p class="contacts-list__text">
-                Postanschrift
-            </p>
-            <p class="contacts-list__text contacts-list__text--lg">
-                marketing.@mail.com
-            </p>
-        </div>
-    </address>
-    {% include "feedback.html" %}
+        </section>
+        <address class="contacts-list">
+            <div class="contacts-list__item">
+                <p class="contacts-list__text">
+                    Shop 20a/508-516 Old Northern Rd, Dural NSW 2158, Australien
+                </p>
+            </div>
+            <div class="contacts-list__item">
+                <p class="contacts-list__text">
+                    Telefonnummer
+                </p>
+                <p class="contacts-list__text contacts-list__text--lg">
+                    +61 3 6234 3549
+                </p>
+            </div>
+            <div class="contacts-list__item">
+                <p class="contacts-list__text">
+                    Postanschrift
+                </p>
+                <p class="contacts-list__text contacts-list__text--lg">
+                    marketing.@mail.com
+                </p>
+            </div>
+        </address>
+        {% include "feedback.html" %}
+    </main>
 {% endblock %}

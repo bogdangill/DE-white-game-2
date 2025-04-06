@@ -10,10 +10,15 @@
     padding: 20px;
 
     &--fixed {
-        max-height: 329px;
-        overflow-y: scroll;
+        flex-shrink: 0;
+
+        @include tablet-md {
+            align-self: flex-start;
+        }
     }
     &--grid {
+        grid-row: span 2;
+        
         @include tablet-md {
             flex-direction: row;
             flex-wrap: wrap;

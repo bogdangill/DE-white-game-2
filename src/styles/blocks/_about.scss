@@ -7,10 +7,6 @@
     &__list {
         display: grid;
         gap: 24px;
-
-        @include tablet-sm {
-            grid-template-columns: repeat(3, 1fr);
-        }
     }
 }
 
