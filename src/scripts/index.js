@@ -1,3 +1,4 @@
+import Banner from "./banner.js";
 import { Faq } from "./faq.js";
 import Form from "./form.js";
 import { Nav, Popup } from "./nav.js";
@@ -21,3 +22,6 @@ form.init();
 
 const popup = new Popup();
 const nav = new Nav();
+const cookieBanner = new Banner('[data-js-banner-cookie]');
+
+cookieBanner.showBanner();
