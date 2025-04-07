@@ -1,6 +1,6 @@
 {
-  "name": "white-game-template",
-  "version": "1.0.0",
+  "name": "de-white-game",
+  "version": "2.0.0",
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
