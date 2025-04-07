@@ -60,6 +60,9 @@ svg image {
             margin: 0;
         }
     }
+    @include desktop-md {
+        margin-right: 0;
+    }
 }
 
 .mb-section {
@@ -147,4 +150,11 @@ footer {
 
 .text-center {
     text-align: center !important;
+}
+
+.mx-16-to-md {
+    @include tablet-md-below {
+        margin-left: 16px !important;
+        margin-right: 16px !important;
+    }
 }

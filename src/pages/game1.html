@@ -17,197 +17,190 @@
     </header>
 {% endblock %}
 
+{% set players = [
+    {
+        name: 'wilder_pirat_458',
+        lvl: 'Level: 15',
+        price: '$1 900'
+    },
+    {
+        name: 'vix_27',
+        lvl: 'Level: 11',
+        price: '$1 400'
+    },
+    {
+        name: 'nyxar-echo',
+        lvl: 'Level: 19',
+        price: '$4 520'
+    },
+    {
+        name: 'ThunderRunner-4',
+        lvl: 'Level: 24',
+        price: '$7 856'
+    },
+    {
+        name: 'black Jack_154',
+        lvl: 'Level: 22',
+        price: '$7 389'
+    }
+] %}
+{% set data = [
+    {
+        key: 'Genres: ',
+        val: 'Action, Shooter.'
+    },
+    {
+        key: 'Plattform: ',
+        val: 'Online (Browser).'
+    },
+    {
+        key: 'Altersfreigabe:',
+        val: '16+.'
+    },
+    {
+        key: 'Spielmodi: ',
+        val: 'Einzelspieler- und Koop-Modus.'
+    },
+    {
+        key: 'Grafik: ',
+        val: 'Detaillierte 3D-Animation mit düsteren post-apokalyptischen Landschaften.'
+    },
+    {
+        key: 'Level: ',
+        val: 'Vielfalt an Levels, von Stadtstraßen bis hin zu verlassenen Fabriken und Wäldern.'
+    },
+    {
+        key: 'Charaktere: ',
+        val: 'Mehrere Charaktere mit einzigartigen Fähigkeiten und Geschichten.'
+    },
+    {
+        key: 'Waffen: ',
+        val: 'Große Auswahl an Waffen und Munition, die aufgerüstet werden können.'
+    },
+    {
+        key: 'Mechanik: ',
+        val: 'Realistische Physik und ausgeklügelte Schieß- und Kampftechniken.'
+    },
+    {
+        key: 'Zusätzliche Merkmale: ',
+        val: 'Charakter-Leveling-System, Handwerk und Ressourcenhandel.'
+    }
+] %}
+{% set games = [
+    {
+        title: 'Halloween-Match-3',
+        text: 'Verbinde Kürbisse, Geister und Süßigkeiten in diesem kniffligen Match-3-Spiel mit über 100 Leveln, magischen Power-Ups und einer süßen Halloween-Story. Besiege Vampire und Hexen, sammle Leckereien und rette das Spukhaus vor dem Fluch! Kostenlos für iOS, Android und PC – perfekt für schnelle Spielrunden mit Gruselfaktor.'
+    },
+    {
+        title: 'Monsters-Match-3',
+        text: 'Sammle Power-Ups wie "Laser-Auge" und befreie die Monster-Fabrik von Dr. Knuddel. Kostenlos mit optionalen Boosts – süchtig machender Puzzlespaß für die ganze Familie!'
+    },
+    {
+        title: 'Scary-Run',
+        text: 'Fliehe vor hungrigen Zombies, springe über Gräber und sammle magische Talismane, um den Fluch des alten Friedhofs zu brechen. Mit atemberaubenden 3D-Grafiken, fiesen Bosskämpfen und täglichen Horror-Challenges – dein Adrenalin wird pumpen!'
+    },
+    {
+        title: 'Splishy-Fish',
+        text: 'Steuere deinen kleinen Fisch durch korallenreiche Riffe, sammle glitzernde Perlen und entkomme hungrigen Haien in diesem temporeichen Endless-Runner. Mit über 50 einzigartigen Fisch-Skins und täglichen Ozean-Challenges – perfekt für schnelle Spielrunden voller Spaß!'
+    }
+] %}
+
 {% block main %}
-    {% set players = [
-        {
-            name: 'wilder_pirat_458',
-            lvl: 'Level: 15',
-            price: '$1 900'
-        },
-        {
-            name: 'vix_27',
-            lvl: 'Level: 11',
-            price: '$1 400'
-        },
-        {
-            name: 'nyxar-echo',
-            lvl: 'Level: 19',
-            price: '$4 520'
-        },
-        {
-            name: 'ThunderRunner-4',
-            lvl: 'Level: 24',
-            price: '$7 856'
-        },
-        {
-            name: 'black Jack_154',
-            lvl: 'Level: 22',
-            price: '$7 389'
-        }
-    ] %}
-    {% set data = [
-        {
-            key: 'Genres: ',
-            val: 'Action, Shooter.'
-        },
-        {
-            key: 'Plattform: ',
-            val: 'Online (Browser).'
-        },
-        {
-            key: 'Altersfreigabe:',
-            val: '16+.'
-        },
-        {
-            key: 'Spielmodi: ',
-            val: 'Einzelspieler- und Koop-Modus.'
-        },
-        {
-            key: 'Grafik: ',
-            val: 'Detaillierte 3D-Animation mit düsteren post-apokalyptischen Landschaften.'
-        },
-        {
-            key: 'Level: ',
-            val: 'Vielfalt an Levels, von Stadtstraßen bis hin zu verlassenen Fabriken und Wäldern.'
-        },
-        {
-            key: 'Charaktere: ',
-            val: 'Mehrere Charaktere mit einzigartigen Fähigkeiten und Geschichten.'
-        },
-        {
-            key: 'Waffen: ',
-            val: 'Große Auswahl an Waffen und Munition, die aufgerüstet werden können.'
-        },
-        {
-            key: 'Mechanik: ',
-            val: 'Realistische Physik und ausgeklügelte Schieß- und Kampftechniken.'
-        },
-        {
-            key: 'Zusätzliche Merkmale: ',
-            val: 'Charakter-Leveling-System, Handwerk und Ressourcenhandel.'
-        }
-    ] %}
-    {% set games = [
-        {
-            title: 'Halloween-Match-3',
-            text: 'Verbinde Kürbisse, Geister und Süßigkeiten in diesem kniffligen Match-3-Spiel mit über 100 Leveln, magischen Power-Ups und einer süßen Halloween-Story. Besiege Vampire und Hexen, sammle Leckereien und rette das Spukhaus vor dem Fluch! Kostenlos für iOS, Android und PC – perfekt für schnelle Spielrunden mit Gruselfaktor.'
-        },
-        {
-            title: 'Monsters-Match-3',
-            text: 'Sammle Power-Ups wie "Laser-Auge" und befreie die Monster-Fabrik von Dr. Knuddel. Kostenlos mit optionalen Boosts – süchtig machender Puzzlespaß für die ganze Familie!'
-        },
-        {
-            title: 'Scary-Run',
-            text: 'Fliehe vor hungrigen Zombies, springe über Gräber und sammle magische Talismane, um den Fluch des alten Friedhofs zu brechen. Mit atemberaubenden 3D-Grafiken, fiesen Bosskämpfen und täglichen Horror-Challenges – dein Adrenalin wird pumpen!'
-        },
-        {
-            title: 'Splishy-Fish',
-            text: 'Steuere deinen kleinen Fisch durch korallenreiche Riffe, sammle glitzernde Perlen und entkomme hungrigen Haien in diesem temporeichen Endless-Runner. Mit über 50 einzigartigen Fisch-Skins und täglichen Ozean-Challenges – perfekt für schnelle Spielrunden voller Spaß!'
-        }
-    ] %}
-    <div class="row-tablet-md  ">
-        <section class="promo">
-            <h1 class="title title--xl promo__title">
-                CARS
-            </h1>
-        </section>
-    </div>
-    <section class="game-description  ">
-        <h2 class="title game-description__title">
-            Über das Spiel
-        </h2>
-        <div class="game-description__list">
-            {% for item in players %}
-                <div class="player-item player-item--vertical">
-                    <img src="images/avatars/avatar_24.png" alt="{{item.name}}" class="player-item__ava">
-                    <h3 class="player-item__name">
-                        {{item.name}}
-                    </h3>
-                    <p class="player-item__lvl">
-                        {{item.lvl}}
-                    </p>
-                    <div class="player-item__price">
-                        {{item.price}}
-                    </div>
+    <main class="main-rows">
+        <div class="row-tablet-md">
+            <section class="promo">
+                <h1 class="title title--xl promo__title">
+                    CARS
+                </h1>
+                <p class="promo__description">
+                    CARS ist ein spannendes Online-Spiel, das die Spieler in die harte und gnadenlose Realität einer post-apokalyptischen Welt eintauchen lässt. Die Stadt ist verwüstet, die Gebäude sind zerstört, die Straßen sind mit Horden von Zombies gefüllt und jede Ecke atmet Gefahr. Sie müssen die Rolle eines der Überlebenden übernehmen, die in diesem Chaos um ihr Leben kämpfen.
+                    <br>
+                    Das Spiel bietet eine Vielzahl von Missionen und Aufgaben, die von den Spielern verlangen, clever, schnell in der Reaktion und strategisch zu denken. Sie werden gegen Horden von Zombies kämpfen, Schlüsselpositionen verteidigen, Überlebende retten und Ressourcen für das Überleben suchen. Ein riesiges Arsenal an Waffen, von Pistolen bis hin zu schweren Maschinengewehren und Granatwerfern, ermöglicht es Ihnen, das richtige Werkzeug für jede Situation auszuwählen.
+                    <br>
+                    Tauchen Sie ein in eine Welt verzweifelter Überlebenskämpfe und brutaler Kämpfe gegen Horden von Zombies in CARS Stellen Sie sich der Herausforderung und werden Sie zum Helden der post-apokalyptischen Ära!
+                </p>
+            </section>
+            <div class="game-card mx-16-to-md">
+                <img src="games/CARS/preview.png" alt="CARS" class="game-card__img">
+                <div class="game-card__body">
+                    <dl class="game-card__data">
+                        <dt class="game-card__key">
+                            Gesamtspieler:
+                        </dt>
+                        <dd class="game-card__val">
+                            18455
+                        </dd>
+                    </dl>
+                    <dl class="game-card__data">
+                        <dt class="game-card__key">
+                            Online-Spieler:
+                        </dt>
+                        <dd class="game-card__val game-card__val--plus">
+                            4953
+                        </dd>
+                    </dl>
+                    <a href="games/CARS/index.html" class="button game-card__button">
+                        Spielen
+                    </a>
                 </div>
-            {% endfor %}
-        </div>
-        <div class="game-card">
-            <img src="games/CARS/preview.png" alt="CARS" class="game-card__img">
-            <div class="game-card__body">
-                <dl class="game-card__data">
-                    <dt class="game-card__key">
-                        Gesamtspieler:
-                    </dt>
-                    <dd class="game-card__val">
-                        18455
-                    </dd>
-                </dl>
-                <dl class="game-card__data">
-                    <dt class="game-card__key">
-                        Online-Spieler:
-                    </dt>
-                    <dd class="game-card__val game-card__val--plus">
-                        4953
-                    </dd>
-                </dl>
-                <a href="games/CARS/index.html" class="button game-card__button">
-                    Spielen
-                </a>
             </div>
         </div>
-    </section>
-    <section class="game-description game-description--texts  ">
-        <h2 class="game-description__title title title--lg">
-            Über das Spiel
-        </h2>
-        <article class="game-description-card">
-            <h3 class="game-description-card__title title">
-                Über das Spiel:
-            </h3>
-            <p class="game-description-card__text">
-                CARS ist ein spannendes Online-Spiel, das die Spieler in die harte und gnadenlose Realität einer post-apokalyptischen Welt eintauchen lässt. Die Stadt ist verwüstet, die Gebäude sind zerstört, die Straßen sind mit Horden von Zombies gefüllt und jede Ecke atmet Gefahr. Sie müssen die Rolle eines der Überlebenden übernehmen, die in diesem Chaos um ihr Leben kämpfen.
-                <br><br>
-                Das Spiel bietet eine Vielzahl von Missionen und Aufgaben, die von den Spielern verlangen, clever, schnell in der Reaktion und strategisch zu denken. Sie werden gegen Horden von Zombies kämpfen, Schlüsselpositionen verteidigen, Überlebende retten und Ressourcen für das Überleben suchen. Ein riesiges Arsenal an Waffen, von Pistolen bis hin zu schweren Maschinengewehren und Granatwerfern, ermöglicht es Ihnen, das richtige Werkzeug für jede Situation auszuwählen.
-                <br><br>
-                Tauchen Sie ein in eine Welt verzweifelter Überlebenskämpfe und brutaler Kämpfe gegen Horden von Zombies in CARS Stellen Sie sich der Herausforderung und werden Sie zum Helden der post-apokalyptischen Ära!
-            </p>
-        </article>
-        <article class="game-description-card">
-            <h3 class="game-description-card__title title">
-                Spielmerkmale:
-            </h3>
-            {% for item in data %}
-                <dl class="game-description-card__data">
-                    <dt class="game-description-card__key">
-                        {{item.key}}
-                    </dt>
-                    <dd class="game-description-card__val">
-                        {{item.val}}
-                    </dd>
-                </dl>
-            {% endfor %}
-        </article>
-    </section>
-    <section class="game-trends  ">
-        <h2 class="title game-trends__title">
-            Trending
-        </h2>
-        <ul class="game-trends__list">
-            {% for item in games %}
-                <li class="game-card">
-                    <img src="games/{{item.title}}/preview.png" alt="{{item.title}}" class="game-card__img">
-                    <div class="game-card__body">
-                        <h3 class="game-card__title">
-                            {{item.title}}
+        <section class="game-description  ">
+            <h2 class="title game-description__title">
+                Über das Spiel
+            </h2>
+            <article class="game-description-card">
+                <h3 class="game-description-card__title title">
+                    Spielmerkmale:
+                </h3>
+                {% for item in data %}
+                    <dl class="game-description-card__data">
+                        <dt class="game-description-card__key">
+                            {{item.key}}
+                        </dt>
+                        <dd class="game-description-card__val">
+                            {{item.val}}
+                        </dd>
+                    </dl>
+                {% endfor %}
+            </article>
+            <div class="game-description__list">
+                {% for item in players %}
+                    <div class="player-item player-item--vertical">
+                        <img src="images/avatars/avatar_24.png" alt="{{item.name}}" class="player-item__ava">
+                        <h3 class="player-item__name">
+                            {{item.name}}
                         </h3>
-                        <p class="game-card__text">
-                            {{item.text}}
+                        <p class="player-item__lvl">
+                            {{item.lvl}}
                         </p>
-                        <img src="images/Frame 3233.png" alt="5" class="game-card__rating">
+                        <div class="player-item__price">
+                            {{item.price}}
+                        </div>
                     </div>
-                </li>
-            {% endfor %}
-        </ul>
-    </section>
+                {% endfor %}
+            </div>
+        </section>
+        <section class="game-trends  ">
+            <h2 class="title game-trends__title">
+                Trending
+            </h2>
+            <ul class="game-trends__list">
+                {% for item in games %}
+                    <li class="game-card">
+                        <img src="games/{{item.title}}/preview.png" alt="{{item.title}}" class="game-card__img">
+                        <div class="game-card__body">
+                            <h3 class="game-card__title">
+                                {{item.title}}
+                            </h3>
+                            <p class="game-card__text">
+                                {{item.text}}
+                            </p>
+                            <img src="images/Frame 3233.png" alt="5" class="game-card__rating">
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
 {% endblock %}

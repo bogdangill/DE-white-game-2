@@ -21,6 +21,7 @@
     }
 
     &__title {
+        grid-row: span 2;
         margin: 0;
     }
     &__list {
