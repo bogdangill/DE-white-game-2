@@ -14,13 +14,13 @@
             </div>
             <img src="images/notifications.png" alt="Notifications">
         </div>
-        <h1 class="title header__title">Willkommen bei uns</h1>
     </header>
 {% endblock %}
 
 {% block main %}
     <main class="main-rows">
         <section class="promo">
+            <h1 class="title promo__title">Willkommen bei uns</h1>
             <h2 class="title title--xl promo__title">
                 Unity Hub!
             </h2>
@@ -31,11 +31,11 @@
                 Abonniere die Unternehmensnachrichten
             </a>
         </section>
-        {% include "games.html" %}
         <div class="row-tablet-md">
             {% include "players-history.html" %}
             {% include "steps.html" %}
         </div>
+        {% include "games.html" %}
         {% include "bonus.html" %}
         {% include "faq.html" %}
         {% include "winners.html" %}

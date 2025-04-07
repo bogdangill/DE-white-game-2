@@ -24,20 +24,6 @@ svg image {
 
 .wrapper {
     @include container($container-width, 0);
-
-    @include tablet-md {
-        display: grid;
-        grid-template-columns: 148px 1fr;
-        align-items: start;
-        column-gap: 40px;
-
-        &::before {
-            content: '';
-        }
-        main {
-            grid-column: 2;
-        }
-    }
 }
 
 .main-rows {
@@ -45,6 +31,7 @@ svg image {
     flex-direction: column;
     justify-content: flex-start;
     gap: 60px;
+    padding-bottom: 140px;
 }
 
 .row-tablet-md {
