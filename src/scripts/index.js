@@ -4,14 +4,14 @@ import Form from "./form.js";
 import { Nav, Popup } from "./nav.js";
 import { WhiteGameSlider } from "./slider.js";
 
-const gameSlider = new WhiteGameSlider('.games__slider-container', {
+const gameSlider = new WhiteGameSlider('[data-ziel-ein]', {
     slideWidth: '285px'
 });
 if (window.matchMedia('(min-width: 767px)').matches) {
     gameSlider.init();
 }
 
-const faqSlider = new WhiteGameSlider('.faq-feature__container');
+const faqSlider = new WhiteGameSlider('[data-ziel-zwo]');
 faqSlider.init();
 
 const faq = new Faq();

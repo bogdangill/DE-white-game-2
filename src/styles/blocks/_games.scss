@@ -17,6 +17,10 @@
 
         @include tablet-sm {
             flex-direction: row;
+
+            .game-card {
+                height: 100%;
+            }
         }
     }
     &__slider-container {
