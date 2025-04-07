@@ -18,18 +18,16 @@
 {% endblock %}
 
 {% block main %}
-    <main class="main-rows">
-        <div class="row-tablet-md">
-            <section class="promo">
-                <h1 class="title title--xl promo__title">
-                    Wer wir<br> sind
-                </h1>
-                <p class="promo__text">
-                    Wir sind ein ergebnisorientiertes Team
-                </p>
-            </section>
-            {% include "team.html" %}
-        </div>
-        {% include "about.html" %}
-    </main>
+    <div class="row-tablet-md">
+        <section class="promo">
+            <h1 class="title title--xl promo__title">
+                Wer wir<br> sind
+            </h1>
+            <p class="promo__text">
+                Wir sind ein ergebnisorientiertes Team
+            </p>
+        </section>
+        {% include "team.html" %}
+    </div>
+    {% include "about.html" %}
 {% endblock %}

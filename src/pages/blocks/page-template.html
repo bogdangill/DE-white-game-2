@@ -45,8 +45,10 @@
     </aside>
     {% block header %}
     {% endblock %}
-    {% block main %}
-    {% endblock %}
+    <main class="main-rows">
+        {% block main %}
+        {% endblock %}
+    </main>
     {% include "banner.html" %}
     <script src="./scripts/index.js" type="module" defer></script>
 </body>
