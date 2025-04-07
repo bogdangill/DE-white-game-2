@@ -11,10 +11,6 @@
 
     &--fixed {
         flex-shrink: 0;
-
-        @include tablet-md {
-            align-self: flex-start;
-        }
     }
     &--grid {
         grid-row: span 2;

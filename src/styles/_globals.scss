@@ -23,7 +23,7 @@ svg image {
 }
 
 .wrapper {
-    @include container($container-width, 0);
+    @include container($container-width, 16px);
 }
 
 .main-rows {
@@ -41,34 +41,14 @@ svg image {
 
     @include tablet-md {
         flex-direction: row;
-        margin-right: 16px;
+
+        &.reverse {
+            flex-direction: row-reverse;
+        }
 
         * {
             margin: 0;
         }
-    }
-    @include desktop-md {
-        margin-right: 0;
-    }
-}
-
-.mb-section {
-    margin-bottom: 60px !important;
-
-    @include tablet-md {
-        margin-bottom: 40px !important;
-    }
-}
-
-article,
-section,
-header,
-footer {
-    margin-right: 16px;
-    margin-left: 16px;
-
-    @include tablet-md {
-        margin-left: 0;
     }
     @include desktop-md {
         margin-right: 0;

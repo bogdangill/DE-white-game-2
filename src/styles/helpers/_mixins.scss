@@ -15,5 +15,6 @@
 
     @include desktop-sm {
         padding: 0 calc(50vw - $half-width);
+        margin-left: 16px;
     }
 }

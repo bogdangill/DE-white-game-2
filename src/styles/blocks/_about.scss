@@ -5,8 +5,13 @@
         margin-bottom: 16px;
     }
     &__list {
-        display: grid;
+        display: flex;
+        flex-wrap: wrap;
         gap: 24px;
+    }
+    &__item {
+        flex-basis: 48%;
+        flex-grow: 1;
     }
 }
 

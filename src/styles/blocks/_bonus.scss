@@ -1,6 +1,10 @@
 @use '../helpers' as *;
 
 .bonus {
+    @include tablet-md {
+        grid-column: span 2;
+    }
+    
     &__title {
         margin-bottom: 16px;
     }

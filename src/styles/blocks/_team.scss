@@ -1,6 +1,9 @@
 @use '../helpers' as *;
 
 .team {
+    @include tablet-md {
+        flex-basis: 45%;
+    }
     &__title {
         margin-bottom: 16px;
     }
@@ -20,29 +23,15 @@
     border-radius: $brad;
     overflow: hidden;
 
-    @include desktop-sm {
-        display: flex;
-        flex-direction: row;
-    }
-
     &__ava {
         height: 200px;
         width: 100%;
         object-fit: cover;
         object-position: center;
-
-        @include desktop-sm {
-            height: 100%;
-            width: 150px;
-        }
     }
     &__text {
         padding: 20px;
         margin: 0;
-
-        @include desktop-sm {
-            padding-top: 30px;
-        }
     }
     &__name {
         color: $bg-covers;

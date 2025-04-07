@@ -74,20 +74,6 @@
         ava: 'avatar_17'
     }
 ] %}
-{% set cards = [
-    {
-        img: 'about_us_01',
-        text: 'Wir haben diesen Ort speziell für Gaming-Enthusiasten geschaffen. Hier findest du Spiele für jeden Geschmack, die dich in eine erstaunliche Welt voller Abenteuer und Entdeckungen entführen. Auf der Seite findet jeder etwas Besonderes und Interessantes für sich.'
-    },
-    {
-        img: 'about_us_02',
-        text: 'Schließe dich uns an und beginne jetzt zu spielen! Tauche ein in eine Welt der Spiele voller erstaunlicher Geschichten und aufregender Abenteuer.'
-    },
-    {
-        img: 'about_us_03',
-        text: 'Auf Unity Hub findest du viele interessante Spiele, die dir ein unvergessliches Erlebnis bieten. Diese Seite ist perfekt für alle, die das Gaming lieben und nach etwas Neuem und Aufregendem suchen.'
-    }
-] %}
 
 <section class="winners">
     <h2 class="title winners__title">
@@ -95,27 +81,6 @@
     </h2>
     <div class="winners__grid">
         <div class="players-history">
-            <h3 class="title title--sm players-history__title">
-                Preisträger
-            </h3>
-            {% for item in winners %}
-                <div class="player-item">
-                    <img src="images/avatars/{{item.ava}}.png" alt="{{item.name}}" class="player-item__ava">
-                    <div class="player-item__block">
-                        <h4 class="player-item__name">
-                            {{item.name}}
-                        </h4>
-                        <p class="player-item__lvl">
-                            Dreadcaptain
-                        </p>
-                    </div>
-                    <div class="player-item__block">
-                        <img src="images/{{item.price}}.png" alt="" class="player-item__ava">
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-        <div class="players-history players-history--grid">
             <h3 class="title title--sm players-history__title">
                 Finalist
             </h3>
@@ -141,20 +106,27 @@
                 </div>
             {% endfor %}
         </div>
-        <div class="about">
-            <h2 class="title about__title">
-                Über uns
-            </h2>
-            <ul class="about__list">
-                {% for item in cards %}
-                    <li class="about-card">
-                        <img src="images/{{item.img}}.png" alt="" class="about-card__image">
-                        <p class="about-card__text">
-                            {{item.text}}
+        <div class="players-history players-history--grid">
+            <h3 class="title title--sm players-history__title">
+                Preisträger
+            </h3>
+            {% for item in winners %}
+                <div class="player-item">
+                    <img src="images/avatars/{{item.ava}}.png" alt="{{item.name}}" class="player-item__ava">
+                    <div class="player-item__block">
+                        <h4 class="player-item__name">
+                            {{item.name}}
+                        </h4>
+                        <p class="player-item__lvl">
+                            Dreadcaptain
                         </p>
-                    </li>
-                {% endfor %}
-            </ul>
+                    </div>
+                    <div class="player-item__block">
+                        <img src="images/{{item.price}}.png" alt="" class="player-item__ava">
+                    </div>
+                </div>
+            {% endfor %}
         </div>
+        {% include "bonus.html" %}
     </div>
 </section>
