@@ -19,17 +19,19 @@
 {% endblock %}
 
 {% block main %}
-    <section class="promo">
+    <div class="promo">
         <h2 class="title title--xl promo__title">
             Unity Hub!
         </h2>
-        <p class="promo__text">
-            Deine Reise in die Welt der Spiele beginnt hier. Schließe dich uns an und entdecke neue, aufregende Welten.
-        </p>
-        <a class="button promo__btn" href="#form">
-            Abonniere die Unternehmensnachrichten
-        </a>
-    </section>
+        <div class="promo__inner">
+            <p class="promo__text">
+                Deine Reise in die Welt der Spiele beginnt hier. Schließe dich uns an und entdecke neue, aufregende Welten.
+            </p>
+            <a class="button promo__btn" href="#form">
+                Abonniere die Unternehmensnachrichten
+            </a>
+        </div>
+    </div>
     {% include "games.html" %}
     <div class="row-tablet-md">
         {% include "players-history.html" %}

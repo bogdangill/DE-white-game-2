@@ -19,14 +19,16 @@
 
 {% block main %}
     <div class="row-tablet-md">
-        <section class="promo">
+        <div class="promo">
             <h1 class="title title--xl promo__title">
                 Wer wir<br> sind
             </h1>
-            <p class="promo__text">
-                Wir sind ein ergebnisorientiertes Team
-            </p>
-        </section>
+            <div class="promo__inner">
+                <p class="promo__text">
+                    Wir sind ein ergebnisorientiertes Team
+                </p>
+            </div>
+        </div>
         {% include "team.html" %}
     </div>
     {% include "about.html" %}

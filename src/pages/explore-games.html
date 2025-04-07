@@ -19,14 +19,16 @@
 
 {% block main %}
     <div class="row-tablet-md">
-        <section class="promo">
+        <div class="promo">
             <h1 class="title title--xl promo__title">
                 Spiele<br> erkunden
             </h1>
-            <p class="promo__text">
-                Wir haben diesen Ort speziell für Gaming-Enthusiasten geschaffen
-            </p>
-        </section>
+            <div class="promo__inner">
+                <p class="promo__text">
+                    Wir haben diesen Ort speziell für Gaming-Enthusiasten geschaffen
+                </p>
+            </div>
+        </div>
         {% include "players-history.html" %}
     </div>
     {% include "bonus.html" %}
