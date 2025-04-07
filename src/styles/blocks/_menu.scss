@@ -15,6 +15,7 @@
     @include tablet-md-below {
         top: 30px;
         left: 16px;
+        box-shadow: 0px 0px 20px 0px rgba(0, 8, 27, 0.25);
     }
 
     @include tablet-md {

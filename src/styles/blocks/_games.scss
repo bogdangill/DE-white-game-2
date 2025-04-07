@@ -18,6 +18,16 @@
         @include tablet-sm {
             flex-direction: row;
         }
+
+        @include tablet-sm {
+            .wg-slider__slide {
+                display: flex;
+                flex-direction: column;
+            }
+            .game-card {
+                height: 100%;
+            }
+        }
     }
     &__slider-container {
         @include tablet-sm {
@@ -27,6 +37,8 @@
 }
 
 .game-card {
+    display: flex;
+    flex-direction: column;
     background-color: $bg-covers;
     overflow: hidden;
     border-radius: $brad;
@@ -38,6 +50,7 @@
         object-position: center;
     }
     &__body {
+        flex-grow: 1;
         display: flex;
         flex-direction: column;
         background-color: $bg-covers;
@@ -55,6 +68,7 @@
         margin-bottom: 20px;
     }
     &__button {
+        margin-top: auto;
         width: 100%;
     }
     &__data {
