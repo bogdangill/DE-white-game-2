@@ -33,6 +33,7 @@
         object-position: center;
     }
     &__text {
+        display: inline-block;
         font-size: $font-size;;
         line-height: $line-height;
         margin: 20px;

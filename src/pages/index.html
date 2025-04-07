@@ -33,7 +33,7 @@
         }
     ] %}
     <main class="main-rows">
-        <section class="promo">
+        <div class="promo">
             <h1 class="title promo__title">Willkommen bei uns</h1>
             <h2 class="title title--xl promo__title">
                 Unity Hub!
@@ -44,22 +44,22 @@
             <a class="button promo__btn" href="#form">
                 Abonniere die Unternehmensnachrichten
             </a>
-        </section>
-        <div class="about">
+        </div>
+        <section class="about">
             <h2 class="title about__title">
                 Über uns
             </h2>
-            <ul class="about__list">
+            <div class="about__list">
                 {% for item in cards %}
-                    <li class="about-card about__item">
+                    <div class="about-card about__item">
                         <img src="images/{{item.img}}.png" alt="" class="about-card__image">
-                        <p class="about-card__text">
+                        <span class="about-card__text">
                             {{item.text}}
-                        </p>
-                    </li>
+                        </span>
+                    </div>
                 {% endfor %}
-            </ul>
-        </div>
+            </div>
+        </section>
         <div class="row-tablet-md reverse">
             {% include "players-history.html" %}
             {% include "steps.html" %}
