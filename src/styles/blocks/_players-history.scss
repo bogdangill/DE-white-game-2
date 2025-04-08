@@ -48,9 +48,10 @@
 }
 
 .player-item {
-    display: grid;
-    grid-template-columns: 45px 1fr auto;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
+    flex-basis: 48%;
     gap: 10px;
     min-width: 245px;
     flex-grow: 1;
@@ -65,8 +66,6 @@
     }
     
     &__block {
-        flex-shrink: 0;
-
         &:last-of-type {
             margin-left: auto;
         }
@@ -74,6 +73,7 @@
     &__name {
         font-size: 14px;
         line-height: 16px;
+        word-break: break-all;
         margin-bottom: 6px;
     }
     &__lvl {
