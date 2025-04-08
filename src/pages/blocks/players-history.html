@@ -37,12 +37,12 @@
     </h3>
     {% for item in players %}
         <div class="player-item">
-            <img src="images/avatars/{{item.ava}}.png" alt="BlackRogue" class="player-item__ava">
+            <img src="images/avatars/{{item.ava}}.png" alt="" class="player-item__ava">
             <div class="player-item__block">
-                <h4 class="player-item__name">
+                <h4 class="player-item__name" data-player-name>
                     {{item.name}}
                 </h4>
-                <p class="player-item__lvl">
+                <p class="player-item__lvl" data-player-lvl>
                     {{item.lvl}}
                 </p>
             </div>
@@ -50,7 +50,7 @@
                 <p class="player-item__text">
                     Gewonnen:
                 </p>
-                <div class="player-item__price">
+                <div class="player-item__price" data-player-price>
                     {{item.price}}
                 </div>
             </div>
