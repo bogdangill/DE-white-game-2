@@ -123,14 +123,14 @@
         <div class="game-description__list">
             {% for item in players %}
                 <div class="player-item player-item--vertical">
-                    <img src="images/avatars/avatar_24.png" alt="{{item.name}}" class="player-item__ava">
-                    <h3 class="player-item__name">
+                    <img src="images/avatars/avatar_24.png" alt="" class="player-item__ava">
+                    <h3 class="player-item__name" data-player-name>
                         {{item.name}}
                     </h3>
-                    <p class="player-item__lvl">
+                    <p class="player-item__lvl" data-player-lvl>
                         {{item.lvl}}
                     </p>
-                    <div class="player-item__price">
+                    <div class="player-item__price" data-player-price>
                         {{item.price}}
                     </div>
                 </div>
@@ -143,7 +143,7 @@
                     <dt class="game-card__key">
                         Gesamtspieler:
                     </dt>
-                    <dd class="game-card__val">
+                    <dd class="game-card__val" data-game-players-all>
                         18455
                     </dd>
                 </dl>
@@ -151,7 +151,7 @@
                     <dt class="game-card__key">
                         Online-Spieler:
                     </dt>
-                    <dd class="game-card__val game-card__val--plus">
+                    <dd class="game-card__val game-card__val--plus" data-game-players-online>
                         4953
                     </dd>
                 </dl>
