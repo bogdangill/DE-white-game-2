@@ -1,6 +1,7 @@
 @use '../helpers' as *;
 
 .players-history {
+    flex-shrink: 0;
     min-width: 285px;
     display: flex;
     flex-direction: column;
@@ -27,6 +28,9 @@
             .players-history__title {
                 flex-grow: 1;
                 width: 100%;
+            }
+            .player-item {
+                flex-basis: 360px;
             }
         }
         @include desktop-sm {
@@ -60,6 +64,13 @@
         min-width: 120px;
     }
     
+    &__block {
+        flex-shrink: 0;
+
+        &:last-of-type {
+            margin-left: auto;
+        }
+    }
     &__name {
         font-size: 14px;
         line-height: 16px;
